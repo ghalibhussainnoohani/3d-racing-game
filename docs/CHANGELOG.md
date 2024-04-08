@@ -7,3 +7,4 @@ Full release notes and development milestones.
 - `2024-04-03T15:30:46+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2024-04-03T14:54:52+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2024-04-05T16:24:16+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2024-04-08T18:07:51+05:00`: feat: tune anti-gravity hovering dampening physics
