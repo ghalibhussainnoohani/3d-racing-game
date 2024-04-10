@@ -9,3 +9,4 @@ Full release notes and development milestones.
 - `2024-04-05T16:24:16+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2024-04-08T18:07:51+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2024-04-10T20:39:48+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2024-04-10T17:21:49+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
