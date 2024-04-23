@@ -16,3 +16,4 @@ Full release notes and development milestones.
 - `2024-04-15T17:48:52+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2024-04-19T21:41:45+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-04-19T20:11:43+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2024-04-23T14:41:52+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
