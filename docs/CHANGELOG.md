@@ -24,3 +24,4 @@ Full release notes and development milestones.
 - `2024-05-03T19:58:03+05:00`: feat: implement procedural circuit color palette generator
 - `2024-05-06T14:46:32+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2024-05-06T18:54:17+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2024-05-08T12:48:42+05:00`: docs: add track geometry and collision documentation
