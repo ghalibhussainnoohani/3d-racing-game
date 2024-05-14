@@ -29,3 +29,4 @@ Full release notes and development milestones.
 - `2024-05-10T20:41:00+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-05-12T12:50:46+05:00`: chore: clean up texture memory on level transitions
 - `2024-05-14T17:05:25+05:00`: fix: resolve camera clipping on steep banked curves
+- `2024-05-14T12:58:41+05:00`: refactor: clean up audio synthesizer oscillator voices
