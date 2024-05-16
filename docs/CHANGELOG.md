@@ -31,3 +31,4 @@ Full release notes and development milestones.
 - `2024-05-14T17:05:25+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-05-14T12:58:41+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2024-05-16T21:20:54+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2024-05-16T18:39:04+05:00`: feat: support responsive fullscreen aspect ratio resizing
