@@ -34,3 +34,4 @@ Full release notes and development milestones.
 - `2024-05-16T18:39:04+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2024-05-16T21:34:48+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2024-05-17T22:23:12+05:00`: chore: clean up texture memory on level transitions
+- `2024-05-17T22:55:11+05:00`: feat: introduce turbo energy consumption falloff curves
