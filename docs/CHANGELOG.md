@@ -37,3 +37,4 @@ Full release notes and development milestones.
 - `2024-05-17T22:55:11+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2024-05-18T20:22:40+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2024-05-18T17:20:34+05:00`: feat: implement procedural circuit color palette generator
+- `2024-05-18T12:27:05+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
