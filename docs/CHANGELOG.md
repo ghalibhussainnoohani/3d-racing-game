@@ -38,3 +38,4 @@ Full release notes and development milestones.
 - `2024-05-18T20:22:40+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2024-05-18T17:20:34+05:00`: feat: implement procedural circuit color palette generator
 - `2024-05-18T12:27:05+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2024-05-20T13:23:26+05:00`: refactor: clean up audio synthesizer oscillator voices
