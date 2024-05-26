@@ -41,3 +41,4 @@ Full release notes and development milestones.
 - `2024-05-20T13:23:26+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2024-05-21T16:34:17+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2024-05-21T12:01:12+05:00`: perf: optimize collision detection bounding volume hierarchy
+- `2024-05-26T22:37:51+05:00`: perf: optimize collision detection bounding volume hierarchy
