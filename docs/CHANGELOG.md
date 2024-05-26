@@ -43,3 +43,4 @@ Full release notes and development milestones.
 - `2024-05-21T12:01:12+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-05-26T22:37:51+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-05-26T16:19:20+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2024-05-26T12:13:07+05:00`: perf: reduce garbage collection pauses during particle rendering
