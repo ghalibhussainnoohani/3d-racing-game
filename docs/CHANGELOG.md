@@ -46,3 +46,4 @@ Full release notes and development milestones.
 - `2024-05-26T12:13:07+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2024-05-28T13:09:27+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2024-05-28T14:56:19+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2024-06-02T21:10:26+05:00`: docs: add track geometry and collision documentation
