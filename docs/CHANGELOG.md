@@ -47,3 +47,4 @@ Full release notes and development milestones.
 - `2024-05-28T13:09:27+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2024-05-28T14:56:19+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2024-06-02T21:10:26+05:00`: docs: add track geometry and collision documentation
+- `2024-06-03T13:59:55+05:00`: fix: resolve camera clipping on steep banked curves
