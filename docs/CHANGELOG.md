@@ -50,3 +50,4 @@ Full release notes and development milestones.
 - `2024-06-03T13:59:55+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-06-04T21:00:40+05:00`: docs: add track geometry and collision documentation
 - `2024-06-04T18:29:30+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2024-06-05T13:10:01+05:00`: docs: document WebGL rendering pipeline and game architecture
