@@ -53,3 +53,4 @@ Full release notes and development milestones.
 - `2024-06-05T13:10:01+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2024-06-05T18:36:01+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2024-06-13T12:21:16+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2024-06-14T15:33:44+05:00`: fix: prevent racer overlap on narrow tunnel sections
