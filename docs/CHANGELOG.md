@@ -56,3 +56,4 @@ Full release notes and development milestones.
 - `2024-06-14T15:33:44+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-06-17T18:03:52+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2024-06-17T19:06:34+05:00`: fix: resolve camera clipping on steep banked curves
+- `2024-06-18T19:23:39+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
