@@ -58,3 +58,4 @@ Full release notes and development milestones.
 - `2024-06-17T19:06:34+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-06-18T19:23:39+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2024-06-18T22:39:43+05:00`: fix: prevent racer overlap on narrow tunnel sections
+- `2024-06-20T17:51:44+05:00`: feat: support responsive fullscreen aspect ratio resizing
