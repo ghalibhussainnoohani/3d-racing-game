@@ -60,3 +60,4 @@ Full release notes and development milestones.
 - `2024-06-18T22:39:43+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-06-20T17:51:44+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2024-06-21T16:05:03+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2024-06-21T14:34:54+05:00`: refactor: clean up audio synthesizer oscillator voices
