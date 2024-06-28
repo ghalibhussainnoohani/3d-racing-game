@@ -62,3 +62,4 @@ Full release notes and development milestones.
 - `2024-06-21T16:05:03+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-06-21T14:34:54+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2024-06-26T12:39:00+05:00`: feat: add customizable cockpit telemetry overlays
+- `2024-06-28T21:42:52+05:00`: refactor: decouple HUD minimap rendering from main loop
