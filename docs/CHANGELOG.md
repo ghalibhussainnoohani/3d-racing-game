@@ -65,3 +65,4 @@ Full release notes and development milestones.
 - `2024-06-28T21:42:52+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2024-06-28T21:02:10+05:00`: chore: clean up texture memory on level transitions
 - `2024-06-29T20:28:03+05:00`: fix: prevent racer overlap on narrow tunnel sections
+- `2024-06-30T21:41:41+05:00`: fix: correct velocity decay when grazing rough track shoulders
