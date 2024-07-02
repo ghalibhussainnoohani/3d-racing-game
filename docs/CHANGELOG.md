@@ -68,3 +68,4 @@ Full release notes and development milestones.
 - `2024-06-30T21:41:41+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-06-30T11:46:30+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2024-07-01T11:23:11+05:00`: fix: resolve camera clipping on steep banked curves
+- `2024-07-02T15:31:27+05:00`: docs: add track geometry and collision documentation
