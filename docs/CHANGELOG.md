@@ -70,3 +70,4 @@ Full release notes and development milestones.
 - `2024-07-01T11:23:11+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-07-02T15:31:27+05:00`: docs: add track geometry and collision documentation
 - `2024-07-02T18:21:18+05:00`: feat: add customizable cockpit telemetry overlays
+- `2024-07-03T22:32:53+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
