@@ -72,3 +72,4 @@ Full release notes and development milestones.
 - `2024-07-02T18:21:18+05:00`: feat: add customizable cockpit telemetry overlays
 - `2024-07-03T22:32:53+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2024-07-04T13:45:44+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2024-07-05T15:14:49+05:00`: refactor: decouple HUD minimap rendering from main loop
