@@ -73,3 +73,4 @@ Full release notes and development milestones.
 - `2024-07-03T22:32:53+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2024-07-04T13:45:44+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-07-05T15:14:49+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2024-07-08T21:13:39+05:00`: refactor: decouple HUD minimap rendering from main loop
