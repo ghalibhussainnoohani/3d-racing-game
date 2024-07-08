@@ -74,3 +74,4 @@ Full release notes and development milestones.
 - `2024-07-04T13:45:44+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-07-05T15:14:49+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2024-07-08T21:13:39+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2024-07-08T17:33:46+05:00`: fix: prevent racer overlap on narrow tunnel sections
