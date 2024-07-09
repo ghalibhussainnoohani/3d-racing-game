@@ -76,3 +76,4 @@ Full release notes and development milestones.
 - `2024-07-08T21:13:39+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2024-07-08T17:33:46+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-07-09T13:50:52+05:00`: feat: add customizable cockpit telemetry overlays
+- `2024-07-09T17:24:34+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
