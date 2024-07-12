@@ -78,3 +78,4 @@ Full release notes and development milestones.
 - `2024-07-09T13:50:52+05:00`: feat: add customizable cockpit telemetry overlays
 - `2024-07-09T17:24:34+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2024-07-10T20:39:25+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2024-07-12T16:52:05+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
