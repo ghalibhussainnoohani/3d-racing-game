@@ -80,3 +80,4 @@ Full release notes and development milestones.
 - `2024-07-10T20:39:25+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2024-07-12T16:52:05+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2024-07-15T14:14:14+05:00`: perf: optimize collision detection bounding volume hierarchy
+- `2024-07-15T21:17:09+05:00`: fix: resolve camera clipping on steep banked curves
