@@ -82,3 +82,4 @@ Full release notes and development milestones.
 - `2024-07-15T14:14:14+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-07-15T21:17:09+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-07-16T20:12:45+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2024-07-16T14:26:58+05:00`: perf: optimize collision detection bounding volume hierarchy
