@@ -85,3 +85,4 @@ Full release notes and development milestones.
 - `2024-07-16T14:26:58+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-07-16T20:55:27+05:00`: chore: clean up texture memory on level transitions
 - `2024-07-19T12:43:52+05:00`: feat: add customizable cockpit telemetry overlays
+- `2024-07-25T12:39:11+05:00`: fix: resolve camera clipping on steep banked curves
