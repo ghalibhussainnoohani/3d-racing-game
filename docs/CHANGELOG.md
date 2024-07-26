@@ -87,3 +87,4 @@ Full release notes and development milestones.
 - `2024-07-19T12:43:52+05:00`: feat: add customizable cockpit telemetry overlays
 - `2024-07-25T12:39:11+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-07-25T17:37:30+05:00`: fix: resolve camera clipping on steep banked curves
+- `2024-07-26T21:58:22+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
