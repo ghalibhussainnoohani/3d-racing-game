@@ -91,3 +91,4 @@ Full release notes and development milestones.
 - `2024-07-26T13:26:42+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2024-07-29T13:30:31+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-08-01T20:20:07+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2024-08-02T19:27:47+05:00`: chore: clean up texture memory on level transitions
