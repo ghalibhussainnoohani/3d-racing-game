@@ -93,3 +93,4 @@ Full release notes and development milestones.
 - `2024-08-01T20:20:07+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2024-08-02T19:27:47+05:00`: chore: clean up texture memory on level transitions
 - `2024-08-05T17:16:55+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2024-08-05T18:20:04+05:00`: feat: support responsive fullscreen aspect ratio resizing
