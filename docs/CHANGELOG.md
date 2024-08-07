@@ -95,3 +95,4 @@ Full release notes and development milestones.
 - `2024-08-05T17:16:55+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2024-08-05T18:20:04+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2024-08-07T13:56:34+05:00`: feat: support responsive fullscreen aspect ratio resizing
+- `2024-08-07T12:36:45+05:00`: docs: add track geometry and collision documentation
