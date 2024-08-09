@@ -97,3 +97,4 @@ Full release notes and development milestones.
 - `2024-08-07T13:56:34+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2024-08-07T12:36:45+05:00`: docs: add track geometry and collision documentation
 - `2024-08-07T11:57:35+05:00`: feat: implement procedural circuit color palette generator
+- `2024-08-09T19:53:52+05:00`: feat: add customizable cockpit telemetry overlays
