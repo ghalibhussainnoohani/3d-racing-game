@@ -101,3 +101,4 @@ Full release notes and development milestones.
 - `2024-08-12T18:55:40+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2024-08-12T15:59:36+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-08-12T17:16:10+05:00`: feat: add customizable cockpit telemetry overlays
+- `2024-08-14T12:31:07+05:00`: fix: prevent racer overlap on narrow tunnel sections
