@@ -103,3 +103,4 @@ Full release notes and development milestones.
 - `2024-08-12T17:16:10+05:00`: feat: add customizable cockpit telemetry overlays
 - `2024-08-14T12:31:07+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-08-14T12:13:04+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2024-08-14T11:19:00+05:00`: feat: introduce turbo energy consumption falloff curves
