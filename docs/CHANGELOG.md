@@ -105,3 +105,4 @@ Full release notes and development milestones.
 - `2024-08-14T12:13:04+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-08-14T11:19:00+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2024-08-15T15:31:19+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2024-08-16T13:02:02+05:00`: docs: document WebGL rendering pipeline and game architecture
