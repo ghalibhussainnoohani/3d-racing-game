@@ -107,3 +107,4 @@ Full release notes and development milestones.
 - `2024-08-15T15:31:19+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2024-08-16T13:02:02+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2024-08-16T18:00:45+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2024-08-18T17:05:30+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
