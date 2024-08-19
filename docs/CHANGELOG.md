@@ -110,3 +110,4 @@ Full release notes and development milestones.
 - `2024-08-18T17:05:30+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2024-08-18T17:57:54+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2024-08-19T14:43:43+05:00`: docs: add track geometry and collision documentation
+- `2024-08-19T20:57:15+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
