@@ -112,3 +112,4 @@ Full release notes and development milestones.
 - `2024-08-19T14:43:43+05:00`: docs: add track geometry and collision documentation
 - `2024-08-19T20:57:15+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2024-08-19T11:47:05+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
+- `2024-08-21T15:46:23+05:00`: docs: document WebGL rendering pipeline and game architecture
