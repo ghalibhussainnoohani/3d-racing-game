@@ -114,3 +114,4 @@ Full release notes and development milestones.
 - `2024-08-19T11:47:05+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2024-08-21T15:46:23+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2024-08-23T11:40:36+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2024-08-23T11:47:48+05:00`: fix: prevent racer overlap on narrow tunnel sections
