@@ -117,3 +117,4 @@ Full release notes and development milestones.
 - `2024-08-23T11:47:48+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-08-27T20:25:22+05:00`: feat: add customizable cockpit telemetry overlays
 - `2024-08-29T13:48:41+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2024-08-29T14:24:23+05:00`: chore: clean up texture memory on level transitions
