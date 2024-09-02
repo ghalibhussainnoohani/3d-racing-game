@@ -119,3 +119,4 @@ Full release notes and development milestones.
 - `2024-08-29T13:48:41+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2024-08-29T14:24:23+05:00`: chore: clean up texture memory on level transitions
 - `2024-08-30T12:22:38+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2024-09-02T20:14:07+05:00`: perf: reduce garbage collection pauses during particle rendering
