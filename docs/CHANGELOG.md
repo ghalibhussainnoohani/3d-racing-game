@@ -121,3 +121,4 @@ Full release notes and development milestones.
 - `2024-08-30T12:22:38+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-09-02T20:14:07+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2024-09-02T19:48:32+05:00`: perf: optimize collision detection bounding volume hierarchy
+- `2024-09-02T17:04:18+05:00`: fix: prevent racer overlap on narrow tunnel sections
