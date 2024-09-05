@@ -123,3 +123,4 @@ Full release notes and development milestones.
 - `2024-09-02T19:48:32+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-09-02T17:04:18+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-09-04T13:01:51+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2024-09-05T21:01:07+05:00`: fix: correct velocity decay when grazing rough track shoulders
