@@ -127,3 +127,4 @@ Full release notes and development milestones.
 - `2024-09-08T11:30:35+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-09-08T15:55:43+05:00`: docs: add track geometry and collision documentation
 - `2024-09-09T14:29:23+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2024-09-09T21:33:15+05:00`: fix: prevent racer overlap on narrow tunnel sections
