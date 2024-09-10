@@ -130,3 +130,4 @@ Full release notes and development milestones.
 - `2024-09-09T21:33:15+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-09-10T19:14:51+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2024-09-10T19:17:43+05:00`: docs: add track geometry and collision documentation
+- `2024-09-10T13:23:18+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
