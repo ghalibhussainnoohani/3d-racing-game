@@ -134,3 +134,4 @@ Full release notes and development milestones.
 - `2024-09-12T15:41:40+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2024-09-12T12:47:19+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-09-13T16:21:12+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2024-09-15T13:01:42+05:00`: perf: reduce garbage collection pauses during particle rendering
