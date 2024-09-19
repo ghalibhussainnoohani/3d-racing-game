@@ -138,3 +138,4 @@ Full release notes and development milestones.
 - `2024-09-17T20:23:45+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-09-18T21:16:41+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2024-09-19T21:00:55+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2024-09-19T18:30:18+05:00`: feat: introduce turbo energy consumption falloff curves
