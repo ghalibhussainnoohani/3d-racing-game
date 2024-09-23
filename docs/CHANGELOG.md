@@ -141,3 +141,4 @@ Full release notes and development milestones.
 - `2024-09-19T18:30:18+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2024-09-20T22:41:13+05:00`: feat: implement procedural circuit color palette generator
 - `2024-09-20T11:50:46+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2024-09-23T17:37:39+05:00`: feat: tune anti-gravity hovering dampening physics
