@@ -143,3 +143,4 @@ Full release notes and development milestones.
 - `2024-09-20T11:50:46+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2024-09-23T17:37:39+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2024-09-23T21:21:24+05:00`: perf: optimize collision detection bounding volume hierarchy
+- `2024-09-25T20:26:00+05:00`: fix: correct velocity decay when grazing rough track shoulders
