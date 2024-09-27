@@ -145,3 +145,4 @@ Full release notes and development milestones.
 - `2024-09-23T21:21:24+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-09-25T20:26:00+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-09-25T11:10:08+05:00`: chore: clean up texture memory on level transitions
+- `2024-09-27T16:56:42+05:00`: fix: resolve camera clipping on steep banked curves
