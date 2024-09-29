@@ -146,3 +146,4 @@ Full release notes and development milestones.
 - `2024-09-25T20:26:00+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-09-25T11:10:08+05:00`: chore: clean up texture memory on level transitions
 - `2024-09-27T16:56:42+05:00`: fix: resolve camera clipping on steep banked curves
+- `2024-09-29T21:07:00+05:00`: chore: clean up texture memory on level transitions
