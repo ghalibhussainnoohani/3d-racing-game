@@ -148,3 +148,4 @@ Full release notes and development milestones.
 - `2024-09-27T16:56:42+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-09-29T21:07:00+05:00`: chore: clean up texture memory on level transitions
 - `2024-09-30T21:41:27+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2024-09-30T13:24:07+05:00`: feat: tune anti-gravity hovering dampening physics
