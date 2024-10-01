@@ -150,3 +150,4 @@ Full release notes and development milestones.
 - `2024-09-30T21:41:27+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2024-09-30T13:24:07+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2024-09-30T11:15:45+05:00`: feat: implement procedural circuit color palette generator
+- `2024-10-01T15:34:18+05:00`: fix: normalize sound volume across procedural techno seeds
