@@ -153,3 +153,4 @@ Full release notes and development milestones.
 - `2024-10-01T15:34:18+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2024-10-02T13:28:38+05:00`: feat: add customizable cockpit telemetry overlays
 - `2024-10-08T20:11:58+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2024-10-09T18:04:57+05:00`: perf: reduce garbage collection pauses during particle rendering
