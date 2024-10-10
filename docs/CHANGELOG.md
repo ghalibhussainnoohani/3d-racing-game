@@ -155,3 +155,4 @@ Full release notes and development milestones.
 - `2024-10-08T20:11:58+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2024-10-09T18:04:57+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2024-10-09T20:47:32+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2024-10-10T20:57:23+05:00`: feat: support responsive fullscreen aspect ratio resizing
