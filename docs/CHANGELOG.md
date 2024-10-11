@@ -157,3 +157,4 @@ Full release notes and development milestones.
 - `2024-10-09T20:47:32+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2024-10-10T20:57:23+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2024-10-10T18:08:09+05:00`: chore: clean up texture memory on level transitions
+- `2024-10-11T22:34:08+05:00`: docs: document WebGL rendering pipeline and game architecture
