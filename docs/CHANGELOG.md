@@ -159,3 +159,4 @@ Full release notes and development milestones.
 - `2024-10-10T18:08:09+05:00`: chore: clean up texture memory on level transitions
 - `2024-10-11T22:34:08+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2024-10-17T14:11:33+05:00`: fix: prevent racer overlap on narrow tunnel sections
+- `2024-10-21T14:22:19+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
