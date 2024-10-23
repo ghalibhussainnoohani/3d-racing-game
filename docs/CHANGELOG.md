@@ -163,3 +163,4 @@ Full release notes and development milestones.
 - `2024-10-21T15:14:31+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2024-10-22T21:34:26+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2024-10-22T20:40:20+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2024-10-23T18:13:24+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
