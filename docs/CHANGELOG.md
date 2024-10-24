@@ -167,3 +167,4 @@ Full release notes and development milestones.
 - `2024-10-23T11:27:00+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-10-23T17:20:38+05:00`: feat: implement procedural circuit color palette generator
 - `2024-10-24T13:21:51+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2024-10-24T13:20:50+05:00`: fix: resolve camera clipping on steep banked curves
