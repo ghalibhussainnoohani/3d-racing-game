@@ -170,3 +170,4 @@ Full release notes and development milestones.
 - `2024-10-24T13:20:50+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-10-25T20:55:55+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-10-25T16:02:49+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2024-10-28T15:42:30+05:00`: chore: clean up texture memory on level transitions
