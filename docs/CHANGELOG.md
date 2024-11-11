@@ -188,3 +188,4 @@ Full release notes and development milestones.
 - `2024-11-07T19:52:28+05:00`: feat: implement procedural circuit color palette generator
 - `2024-11-11T16:13:25+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2024-11-11T12:49:31+05:00`: docs: add track geometry and collision documentation
+- `2024-11-11T17:19:44+05:00`: fix: correct velocity decay when grazing rough track shoulders
