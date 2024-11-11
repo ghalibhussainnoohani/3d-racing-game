@@ -187,3 +187,4 @@ Full release notes and development milestones.
 - `2024-11-06T13:11:57+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2024-11-07T19:52:28+05:00`: feat: implement procedural circuit color palette generator
 - `2024-11-11T16:13:25+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2024-11-11T12:49:31+05:00`: docs: add track geometry and collision documentation
