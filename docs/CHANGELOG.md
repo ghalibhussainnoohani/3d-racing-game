@@ -193,3 +193,4 @@ Full release notes and development milestones.
 - `2024-11-12T20:30:57+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2024-11-13T22:34:49+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2024-11-13T14:12:18+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2024-11-13T18:54:31+05:00`: perf: reduce garbage collection pauses during particle rendering
