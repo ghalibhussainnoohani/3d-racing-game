@@ -191,3 +191,4 @@ Full release notes and development milestones.
 - `2024-11-11T17:19:44+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-11-12T16:13:35+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2024-11-12T20:30:57+05:00`: feat: support responsive fullscreen aspect ratio resizing
+- `2024-11-13T22:34:49+05:00`: feat: support responsive fullscreen aspect ratio resizing
