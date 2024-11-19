@@ -196,3 +196,4 @@ Full release notes and development milestones.
 - `2024-11-13T18:54:31+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2024-11-15T12:55:18+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2024-11-19T22:41:32+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2024-11-19T18:21:58+05:00`: chore: clean up texture memory on level transitions
