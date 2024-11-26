@@ -200,3 +200,4 @@ Full release notes and development milestones.
 - `2024-11-22T12:58:49+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2024-11-22T16:35:27+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2024-11-23T15:46:30+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2024-11-26T14:12:29+05:00`: chore: clean up texture memory on level transitions
