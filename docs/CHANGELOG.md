@@ -202,3 +202,4 @@ Full release notes and development milestones.
 - `2024-11-23T15:46:30+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2024-11-26T14:12:29+05:00`: chore: clean up texture memory on level transitions
 - `2024-11-26T20:30:10+05:00`: chore: clean up texture memory on level transitions
+- `2024-11-29T22:29:45+05:00`: fix: correct velocity decay when grazing rough track shoulders
