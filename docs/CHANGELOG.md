@@ -204,3 +204,4 @@ Full release notes and development milestones.
 - `2024-11-26T20:30:10+05:00`: chore: clean up texture memory on level transitions
 - `2024-11-29T22:29:45+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2024-11-29T19:52:14+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2024-11-30T13:33:01+05:00`: feat: introduce turbo energy consumption falloff curves
