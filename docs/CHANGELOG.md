@@ -207,3 +207,4 @@ Full release notes and development milestones.
 - `2024-11-30T13:33:01+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2024-11-30T19:44:19+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2024-11-30T14:04:04+05:00`: fix: prevent racer overlap on narrow tunnel sections
+- `2024-12-03T11:40:12+05:00`: fix: normalize sound volume across procedural techno seeds
