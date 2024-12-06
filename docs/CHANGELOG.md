@@ -211,3 +211,4 @@ Full release notes and development milestones.
 - `2024-12-03T16:16:58+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2024-12-04T14:33:14+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2024-12-04T17:23:21+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2024-12-06T11:42:30+05:00`: docs: add track geometry and collision documentation
