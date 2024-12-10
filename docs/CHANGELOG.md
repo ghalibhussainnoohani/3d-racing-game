@@ -214,3 +214,4 @@ Full release notes and development milestones.
 - `2024-12-06T11:42:30+05:00`: docs: add track geometry and collision documentation
 - `2024-12-06T14:50:21+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2024-12-10T16:12:02+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2024-12-10T18:18:08+05:00`: fix: resolve camera clipping on steep banked curves
