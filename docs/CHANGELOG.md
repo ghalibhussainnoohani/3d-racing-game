@@ -216,3 +216,4 @@ Full release notes and development milestones.
 - `2024-12-10T16:12:02+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2024-12-10T18:18:08+05:00`: fix: resolve camera clipping on steep banked curves
 - `2024-12-11T12:51:16+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2024-12-11T16:34:58+05:00`: feat: tune anti-gravity hovering dampening physics
