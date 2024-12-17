@@ -220,3 +220,4 @@ Full release notes and development milestones.
 - `2024-12-11T20:15:11+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-12-16T11:22:17+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2024-12-16T16:13:46+05:00`: feat: introduce turbo energy consumption falloff curves
+- `2024-12-17T20:24:54+05:00`: docs: document WebGL rendering pipeline and game architecture
