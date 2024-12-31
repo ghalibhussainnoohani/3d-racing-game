@@ -225,3 +225,4 @@ Full release notes and development milestones.
 - `2024-12-26T13:38:17+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2024-12-30T18:28:13+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2024-12-30T15:13:15+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2024-12-31T11:54:11+05:00`: fix: resolve camera clipping on steep banked curves
