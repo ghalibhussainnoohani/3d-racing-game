@@ -229,3 +229,4 @@ Full release notes and development milestones.
 - `2024-12-31T18:42:53+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-01-03T12:23:06+05:00`: feat: implement procedural circuit color palette generator
 - `2025-01-03T20:49:10+05:00`: docs: add track geometry and collision documentation
+- `2025-01-05T16:39:11+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
