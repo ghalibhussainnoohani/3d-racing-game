@@ -230,3 +230,4 @@ Full release notes and development milestones.
 - `2025-01-03T12:23:06+05:00`: feat: implement procedural circuit color palette generator
 - `2025-01-03T20:49:10+05:00`: docs: add track geometry and collision documentation
 - `2025-01-05T16:39:11+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2025-01-07T17:20:58+05:00`: perf: reduce garbage collection pauses during particle rendering
