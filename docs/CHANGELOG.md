@@ -231,3 +231,4 @@ Full release notes and development milestones.
 - `2025-01-03T20:49:10+05:00`: docs: add track geometry and collision documentation
 - `2025-01-05T16:39:11+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-01-07T17:20:58+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2025-01-08T22:43:16+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
