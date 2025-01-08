@@ -232,3 +232,4 @@ Full release notes and development milestones.
 - `2025-01-05T16:39:11+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-01-07T17:20:58+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2025-01-08T22:43:16+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2025-01-08T16:37:25+05:00`: feat: introduce turbo energy consumption falloff curves
