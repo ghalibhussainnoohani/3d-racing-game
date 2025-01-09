@@ -234,3 +234,4 @@ Full release notes and development milestones.
 - `2025-01-08T22:43:16+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-01-08T16:37:25+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-01-09T20:09:22+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2025-01-09T18:50:48+05:00`: chore: clean up texture memory on level transitions
