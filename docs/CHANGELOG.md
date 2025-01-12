@@ -237,3 +237,4 @@ Full release notes and development milestones.
 - `2025-01-09T18:50:48+05:00`: chore: clean up texture memory on level transitions
 - `2025-01-09T22:49:51+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-01-10T16:05:27+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2025-01-12T16:13:15+05:00`: feat: add customizable cockpit telemetry overlays
