@@ -240,3 +240,4 @@ Full release notes and development milestones.
 - `2025-01-12T16:13:15+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-01-13T11:34:48+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-01-14T20:12:22+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2025-01-17T13:56:08+05:00`: feat: support responsive fullscreen aspect ratio resizing
