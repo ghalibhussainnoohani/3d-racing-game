@@ -243,3 +243,4 @@ Full release notes and development milestones.
 - `2025-01-17T13:56:08+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2025-01-20T18:13:19+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-01-21T15:16:47+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2025-01-21T11:34:42+05:00`: refactor: decouple HUD minimap rendering from main loop
