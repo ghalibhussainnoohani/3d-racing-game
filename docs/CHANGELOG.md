@@ -244,3 +244,4 @@ Full release notes and development milestones.
 - `2025-01-20T18:13:19+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-01-21T15:16:47+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-01-21T11:34:42+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2025-01-23T14:04:34+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
