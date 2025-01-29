@@ -248,3 +248,4 @@ Full release notes and development milestones.
 - `2025-01-27T13:46:23+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-01-28T21:23:34+05:00`: feat: implement procedural circuit color palette generator
 - `2025-01-29T15:34:25+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2025-01-29T20:53:24+05:00`: docs: add track geometry and collision documentation
