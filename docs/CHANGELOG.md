@@ -251,3 +251,4 @@ Full release notes and development milestones.
 - `2025-01-29T20:53:24+05:00`: docs: add track geometry and collision documentation
 - `2025-01-29T12:12:37+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2025-01-30T22:37:40+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2025-01-30T20:11:04+05:00`: feat: support responsive fullscreen aspect ratio resizing
