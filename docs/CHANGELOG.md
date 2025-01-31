@@ -254,3 +254,4 @@ Full release notes and development milestones.
 - `2025-01-30T20:11:04+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2025-01-30T19:38:59+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-01-31T15:30:11+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2025-01-31T12:37:33+05:00`: chore: clean up texture memory on level transitions
