@@ -255,3 +255,4 @@ Full release notes and development milestones.
 - `2025-01-30T19:38:59+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-01-31T15:30:11+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2025-01-31T12:37:33+05:00`: chore: clean up texture memory on level transitions
+- `2025-02-01T17:11:49+05:00`: perf: reduce garbage collection pauses during particle rendering
