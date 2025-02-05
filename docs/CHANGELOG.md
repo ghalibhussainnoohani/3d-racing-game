@@ -257,3 +257,4 @@ Full release notes and development milestones.
 - `2025-01-31T12:37:33+05:00`: chore: clean up texture memory on level transitions
 - `2025-02-01T17:11:49+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2025-02-02T15:31:16+05:00`: feat: introduce turbo energy consumption falloff curves
+- `2025-02-05T20:58:07+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
