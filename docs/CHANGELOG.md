@@ -259,3 +259,4 @@ Full release notes and development milestones.
 - `2025-02-02T15:31:16+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-02-05T20:58:07+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-02-05T13:09:40+05:00`: feat: add customizable cockpit telemetry overlays
+- `2025-02-06T13:40:38+05:00`: feat: support responsive fullscreen aspect ratio resizing
