@@ -261,3 +261,4 @@ Full release notes and development milestones.
 - `2025-02-05T13:09:40+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-02-06T13:40:38+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2025-02-07T20:28:37+05:00`: fix: resolve camera clipping on steep banked curves
+- `2025-02-10T13:05:27+05:00`: refactor: decouple HUD minimap rendering from main loop
