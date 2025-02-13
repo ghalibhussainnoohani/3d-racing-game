@@ -264,3 +264,4 @@ Full release notes and development milestones.
 - `2025-02-10T13:05:27+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2025-02-11T13:52:43+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2025-02-12T13:47:23+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
+- `2025-02-13T14:02:09+05:00`: fix: prevent racer overlap on narrow tunnel sections
