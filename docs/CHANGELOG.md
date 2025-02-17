@@ -268,3 +268,4 @@ Full release notes and development milestones.
 - `2025-02-13T17:46:59+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2025-02-16T14:37:19+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-02-16T14:50:18+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2025-02-17T15:21:23+05:00`: feat: add keyboard and gamepad input mapping handler
