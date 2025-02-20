@@ -269,3 +269,4 @@ Full release notes and development milestones.
 - `2025-02-16T14:37:19+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-02-16T14:50:18+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-02-17T15:21:23+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2025-02-20T20:43:52+05:00`: feat: introduce turbo energy consumption falloff curves
