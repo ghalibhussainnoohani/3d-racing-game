@@ -271,3 +271,4 @@ Full release notes and development milestones.
 - `2025-02-17T15:21:23+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-02-20T20:43:52+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-02-20T21:50:58+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2025-02-21T11:04:26+05:00`: feat: add keyboard and gamepad input mapping handler
