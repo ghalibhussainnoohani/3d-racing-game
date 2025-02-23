@@ -273,3 +273,4 @@ Full release notes and development milestones.
 - `2025-02-20T21:50:58+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-02-21T11:04:26+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-02-21T20:06:23+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2025-02-23T19:55:18+05:00`: docs: document WebGL rendering pipeline and game architecture
