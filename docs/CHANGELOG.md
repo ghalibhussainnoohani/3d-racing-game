@@ -275,3 +275,4 @@ Full release notes and development milestones.
 - `2025-02-21T20:06:23+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-02-23T19:55:18+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2025-02-24T19:53:43+05:00`: feat: introduce turbo energy consumption falloff curves
+- `2025-02-24T14:10:15+05:00`: chore: clean up texture memory on level transitions
