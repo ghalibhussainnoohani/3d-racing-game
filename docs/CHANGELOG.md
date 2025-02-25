@@ -277,3 +277,4 @@ Full release notes and development milestones.
 - `2025-02-24T19:53:43+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-02-24T14:10:15+05:00`: chore: clean up texture memory on level transitions
 - `2025-02-24T16:24:43+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2025-02-25T13:35:26+05:00`: feat: tune anti-gravity hovering dampening physics
