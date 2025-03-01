@@ -279,3 +279,4 @@ Full release notes and development milestones.
 - `2025-02-24T16:24:43+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2025-02-25T13:35:26+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-03-01T18:21:20+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2025-03-01T20:32:45+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
