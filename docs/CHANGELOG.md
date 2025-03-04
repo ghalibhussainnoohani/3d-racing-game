@@ -282,3 +282,4 @@ Full release notes and development milestones.
 - `2025-03-01T20:32:45+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-03-01T19:36:48+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-03-04T15:38:55+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2025-03-04T19:02:53+05:00`: perf: optimize collision detection bounding volume hierarchy
