@@ -284,3 +284,4 @@ Full release notes and development milestones.
 - `2025-03-04T15:38:55+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2025-03-04T19:02:53+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2025-03-04T20:13:38+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2025-03-05T14:54:55+05:00`: fix: correct velocity decay when grazing rough track shoulders
