@@ -290,3 +290,4 @@ Full release notes and development milestones.
 - `2025-03-07T21:15:23+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2025-03-08T22:24:01+05:00`: feat: implement procedural circuit color palette generator
 - `2025-03-09T16:37:03+05:00`: fix: prevent racer overlap on narrow tunnel sections
+- `2025-03-10T11:51:44+05:00`: feat: introduce turbo energy consumption falloff curves
