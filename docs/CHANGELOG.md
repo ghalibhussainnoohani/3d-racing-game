@@ -293,3 +293,4 @@ Full release notes and development milestones.
 - `2025-03-10T11:51:44+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-03-10T17:37:02+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-03-13T15:17:15+05:00`: docs: add track geometry and collision documentation
+- `2025-03-14T13:56:27+05:00`: fix: normalize sound volume across procedural techno seeds
