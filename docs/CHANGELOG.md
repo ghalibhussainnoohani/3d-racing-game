@@ -295,3 +295,4 @@ Full release notes and development milestones.
 - `2025-03-13T15:17:15+05:00`: docs: add track geometry and collision documentation
 - `2025-03-14T13:56:27+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-03-15T13:54:45+05:00`: docs: add track geometry and collision documentation
+- `2025-03-15T16:04:47+05:00`: fix: prevent racer overlap on narrow tunnel sections
