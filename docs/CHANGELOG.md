@@ -297,3 +297,4 @@ Full release notes and development milestones.
 - `2025-03-15T13:54:45+05:00`: docs: add track geometry and collision documentation
 - `2025-03-15T16:04:47+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-03-16T20:15:05+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2025-03-18T22:39:57+05:00`: chore: clean up texture memory on level transitions
