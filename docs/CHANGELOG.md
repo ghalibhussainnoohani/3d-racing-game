@@ -301,3 +301,4 @@ Full release notes and development milestones.
 - `2025-03-18T16:33:35+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2025-03-20T21:57:50+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-03-21T15:51:38+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2025-03-24T22:53:36+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
