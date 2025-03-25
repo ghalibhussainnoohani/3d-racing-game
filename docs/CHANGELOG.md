@@ -302,3 +302,4 @@ Full release notes and development milestones.
 - `2025-03-20T21:57:50+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-03-21T15:51:38+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-03-24T22:53:36+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2025-03-25T15:05:28+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
