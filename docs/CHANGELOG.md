@@ -307,3 +307,4 @@ Full release notes and development milestones.
 - `2025-03-26T21:50:01+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-03-26T21:32:42+05:00`: fix: resolve camera clipping on steep banked curves
 - `2025-03-27T21:04:26+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2025-03-27T21:18:40+05:00`: fix: normalize sound volume across procedural techno seeds
