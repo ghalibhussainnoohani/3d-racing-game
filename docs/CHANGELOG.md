@@ -310,3 +310,4 @@ Full release notes and development milestones.
 - `2025-03-27T21:18:40+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-03-28T11:22:28+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2025-03-30T12:52:22+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2025-03-30T17:11:13+05:00`: perf: optimize collision detection bounding volume hierarchy
