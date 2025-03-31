@@ -313,3 +313,4 @@ Full release notes and development milestones.
 - `2025-03-30T17:11:13+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2025-03-30T18:39:58+05:00`: docs: add track geometry and collision documentation
 - `2025-03-31T19:17:48+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2025-03-31T17:31:42+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
