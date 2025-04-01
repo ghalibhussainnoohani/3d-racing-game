@@ -315,3 +315,4 @@ Full release notes and development milestones.
 - `2025-03-31T19:17:48+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-03-31T17:31:42+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-03-31T16:07:48+05:00`: fix: resolve camera clipping on steep banked curves
+- `2025-04-01T22:57:12+05:00`: perf: reduce garbage collection pauses during particle rendering
