@@ -319,3 +319,4 @@ Full release notes and development milestones.
 - `2025-04-02T18:15:27+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-04-10T22:38:02+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-04-10T22:27:13+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2025-04-14T19:34:22+05:00`: chore: clean up texture memory on level transitions
