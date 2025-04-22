@@ -323,3 +323,4 @@ Full release notes and development milestones.
 - `2025-04-19T13:27:52+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-04-21T22:11:00+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2025-04-22T19:47:44+05:00`: feat: support responsive fullscreen aspect ratio resizing
+- `2025-04-22T14:48:42+05:00`: fix: prevent racer overlap on narrow tunnel sections
