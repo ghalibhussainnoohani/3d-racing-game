@@ -325,3 +325,4 @@ Full release notes and development milestones.
 - `2025-04-22T19:47:44+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2025-04-22T14:48:42+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-04-22T11:25:30+05:00`: chore: clean up texture memory on level transitions
+- `2025-04-25T17:12:21+05:00`: feat: add customizable cockpit telemetry overlays
