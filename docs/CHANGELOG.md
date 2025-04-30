@@ -330,3 +330,4 @@ Full release notes and development milestones.
 - `2025-04-27T14:52:05+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2025-04-28T18:17:11+05:00`: chore: clean up texture memory on level transitions
 - `2025-04-30T15:09:41+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2025-04-30T11:01:01+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
