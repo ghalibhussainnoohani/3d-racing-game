@@ -332,3 +332,4 @@ Full release notes and development milestones.
 - `2025-04-30T15:09:41+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-04-30T11:01:01+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-04-30T17:16:55+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2025-05-01T17:13:13+05:00`: docs: add track geometry and collision documentation
