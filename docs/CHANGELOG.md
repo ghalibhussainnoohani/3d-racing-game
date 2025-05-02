@@ -335,3 +335,4 @@ Full release notes and development milestones.
 - `2025-05-01T17:13:13+05:00`: docs: add track geometry and collision documentation
 - `2025-05-01T19:26:27+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2025-05-01T13:45:51+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2025-05-02T22:59:58+05:00`: fix: prevent racer overlap on narrow tunnel sections
