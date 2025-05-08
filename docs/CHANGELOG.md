@@ -341,3 +341,4 @@ Full release notes and development milestones.
 - `2025-05-07T16:34:27+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-05-07T18:31:31+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2025-05-07T19:14:10+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2025-05-08T17:58:32+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
