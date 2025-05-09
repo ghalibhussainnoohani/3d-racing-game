@@ -344,3 +344,4 @@ Full release notes and development milestones.
 - `2025-05-08T17:58:32+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-05-09T17:14:24+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-05-09T12:35:51+05:00`: feat: implement procedural circuit color palette generator
+- `2025-05-09T16:31:31+05:00`: perf: optimize collision detection bounding volume hierarchy
