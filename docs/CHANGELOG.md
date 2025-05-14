@@ -348,3 +348,4 @@ Full release notes and development milestones.
 - `2025-05-10T14:16:27+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2025-05-12T22:58:22+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2025-05-13T12:08:25+05:00`: fix: resolve camera clipping on steep banked curves
+- `2025-05-14T18:20:16+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
