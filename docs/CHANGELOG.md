@@ -351,3 +351,4 @@ Full release notes and development milestones.
 - `2025-05-14T18:20:16+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-05-14T18:45:40+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2025-05-16T22:04:12+05:00`: chore: clean up texture memory on level transitions
+- `2025-05-16T14:50:31+05:00`: refactor: clean up audio synthesizer oscillator voices
