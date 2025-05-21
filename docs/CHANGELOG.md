@@ -355,3 +355,4 @@ Full release notes and development milestones.
 - `2025-05-16T12:53:02+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-05-17T15:58:09+05:00`: feat: implement procedural circuit color palette generator
 - `2025-05-20T14:07:39+05:00`: chore: clean up texture memory on level transitions
+- `2025-05-21T17:23:42+05:00`: refactor: decouple HUD minimap rendering from main loop
