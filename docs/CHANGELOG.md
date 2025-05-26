@@ -360,3 +360,4 @@ Full release notes and development milestones.
 - `2025-05-24T12:02:56+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2025-05-25T19:53:38+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-05-26T21:40:54+05:00`: chore: clean up texture memory on level transitions
+- `2025-05-26T21:10:35+05:00`: docs: add track geometry and collision documentation
