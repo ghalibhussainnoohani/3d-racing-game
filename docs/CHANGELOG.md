@@ -363,3 +363,4 @@ Full release notes and development milestones.
 - `2025-05-26T21:10:35+05:00`: docs: add track geometry and collision documentation
 - `2025-05-27T16:08:55+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-06-04T22:26:39+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2025-06-04T11:09:38+05:00`: feat: add keyboard and gamepad input mapping handler
