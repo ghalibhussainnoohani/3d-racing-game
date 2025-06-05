@@ -364,3 +364,4 @@ Full release notes and development milestones.
 - `2025-05-27T16:08:55+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-06-04T22:26:39+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-06-04T11:09:38+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2025-06-05T21:11:43+05:00`: docs: document WebGL rendering pipeline and game architecture
