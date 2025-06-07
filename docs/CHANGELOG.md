@@ -367,3 +367,4 @@ Full release notes and development milestones.
 - `2025-06-05T21:11:43+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2025-06-05T19:04:26+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2025-06-06T19:16:50+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2025-06-07T12:24:49+05:00`: feat: tune anti-gravity hovering dampening physics
