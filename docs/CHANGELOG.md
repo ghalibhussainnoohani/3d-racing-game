@@ -372,3 +372,4 @@ Full release notes and development milestones.
 - `2025-06-10T16:36:38+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-06-11T22:31:11+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-06-11T12:24:56+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2025-06-11T15:15:30+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
