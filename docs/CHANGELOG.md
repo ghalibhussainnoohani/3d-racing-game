@@ -370,3 +370,4 @@ Full release notes and development milestones.
 - `2025-06-07T12:24:49+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-06-09T18:22:33+05:00`: docs: add track geometry and collision documentation
 - `2025-06-10T16:36:38+05:00`: fix: prevent racer overlap on narrow tunnel sections
+- `2025-06-11T22:31:11+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
