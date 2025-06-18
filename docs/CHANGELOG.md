@@ -375,3 +375,4 @@ Full release notes and development milestones.
 - `2025-06-11T15:15:30+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-06-16T14:13:46+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2025-06-16T13:08:07+05:00`: feat: implement procedural circuit color palette generator
+- `2025-06-18T14:04:07+05:00`: perf: optimize collision detection bounding volume hierarchy
