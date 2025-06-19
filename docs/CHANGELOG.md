@@ -378,3 +378,4 @@ Full release notes and development milestones.
 - `2025-06-18T14:04:07+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2025-06-18T17:06:46+05:00`: docs: add track geometry and collision documentation
 - `2025-06-19T12:51:09+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2025-06-19T16:55:07+05:00`: fix: correct velocity decay when grazing rough track shoulders
