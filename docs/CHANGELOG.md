@@ -380,3 +380,4 @@ Full release notes and development milestones.
 - `2025-06-19T12:51:09+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2025-06-19T16:55:07+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2025-06-20T14:56:58+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2025-06-20T14:12:06+05:00`: perf: optimize collision detection bounding volume hierarchy
