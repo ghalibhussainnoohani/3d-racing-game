@@ -382,3 +382,4 @@ Full release notes and development milestones.
 - `2025-06-20T14:56:58+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-06-20T14:12:06+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2025-06-23T13:36:49+05:00`: chore: clean up texture memory on level transitions
+- `2025-06-23T13:41:19+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
