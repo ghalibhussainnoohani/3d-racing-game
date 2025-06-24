@@ -384,3 +384,4 @@ Full release notes and development milestones.
 - `2025-06-23T13:36:49+05:00`: chore: clean up texture memory on level transitions
 - `2025-06-23T13:41:19+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-06-23T21:29:31+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2025-06-24T18:32:11+05:00`: docs: document WebGL rendering pipeline and game architecture
