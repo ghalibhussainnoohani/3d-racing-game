@@ -388,3 +388,4 @@ Full release notes and development milestones.
 - `2025-06-24T13:58:03+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-06-26T12:54:39+05:00`: feat: implement procedural circuit color palette generator
 - `2025-06-27T15:38:59+05:00`: feat: implement procedural circuit color palette generator
+- `2025-06-29T19:34:58+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
