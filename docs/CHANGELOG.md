@@ -391,3 +391,4 @@ Full release notes and development milestones.
 - `2025-06-29T19:34:58+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-06-30T14:00:24+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-07-01T19:34:38+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2025-07-02T20:53:57+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
