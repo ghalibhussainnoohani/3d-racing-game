@@ -393,3 +393,4 @@ Full release notes and development milestones.
 - `2025-07-01T19:34:38+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-07-02T20:53:57+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-07-08T20:36:21+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2025-07-08T15:02:14+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
