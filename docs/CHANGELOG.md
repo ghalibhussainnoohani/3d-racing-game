@@ -397,3 +397,4 @@ Full release notes and development milestones.
 - `2025-07-10T22:17:42+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-07-10T14:06:08+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-07-11T20:16:21+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
+- `2025-07-11T17:26:02+05:00`: chore: clean up texture memory on level transitions
