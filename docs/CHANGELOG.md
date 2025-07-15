@@ -401,3 +401,4 @@ Full release notes and development milestones.
 - `2025-07-11T17:28:48+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-07-14T21:16:30+05:00`: feat: implement procedural circuit color palette generator
 - `2025-07-15T15:09:10+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2025-07-15T12:56:36+05:00`: fix: prevent racer overlap on narrow tunnel sections
