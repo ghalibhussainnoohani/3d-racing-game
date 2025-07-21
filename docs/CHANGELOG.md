@@ -405,3 +405,4 @@ Full release notes and development milestones.
 - `2025-07-17T11:34:30+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2025-07-18T18:12:01+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-07-20T18:37:57+05:00`: feat: support responsive fullscreen aspect ratio resizing
+- `2025-07-21T19:14:58+05:00`: refactor: clean up audio synthesizer oscillator voices
