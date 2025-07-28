@@ -410,3 +410,4 @@ Full release notes and development milestones.
 - `2025-07-23T14:12:27+05:00`: feat: implement procedural circuit color palette generator
 - `2025-07-23T21:48:28+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-07-25T22:31:50+05:00`: feat: add customizable cockpit telemetry overlays
+- `2025-07-28T17:51:15+05:00`: fix: prevent racer overlap on narrow tunnel sections
