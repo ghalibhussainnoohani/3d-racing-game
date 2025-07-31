@@ -413,3 +413,4 @@ Full release notes and development milestones.
 - `2025-07-28T17:51:15+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-07-28T21:14:06+05:00`: fix: resolve camera clipping on steep banked curves
 - `2025-07-31T12:09:09+05:00`: chore: clean up texture memory on level transitions
+- `2025-07-31T11:18:27+05:00`: fix: correct velocity decay when grazing rough track shoulders
