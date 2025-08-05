@@ -416,3 +416,4 @@ Full release notes and development milestones.
 - `2025-07-31T11:18:27+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2025-08-03T22:32:51+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2025-08-03T18:27:07+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2025-08-05T14:35:11+05:00`: docs: add track geometry and collision documentation
