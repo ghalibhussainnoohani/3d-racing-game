@@ -418,3 +418,4 @@ Full release notes and development milestones.
 - `2025-08-03T18:27:07+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-08-05T14:35:11+05:00`: docs: add track geometry and collision documentation
 - `2025-08-05T15:35:19+05:00`: perf: optimize collision detection bounding volume hierarchy
+- `2025-08-06T19:19:16+05:00`: feat: add customizable cockpit telemetry overlays
