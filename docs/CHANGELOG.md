@@ -420,3 +420,4 @@ Full release notes and development milestones.
 - `2025-08-05T15:35:19+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2025-08-06T19:19:16+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-08-08T13:28:04+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2025-08-08T13:19:20+05:00`: perf: reduce garbage collection pauses during particle rendering
