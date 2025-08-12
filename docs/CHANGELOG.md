@@ -421,3 +421,4 @@ Full release notes and development milestones.
 - `2025-08-06T19:19:16+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-08-08T13:28:04+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2025-08-08T13:19:20+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2025-08-12T22:22:11+05:00`: docs: document WebGL rendering pipeline and game architecture
