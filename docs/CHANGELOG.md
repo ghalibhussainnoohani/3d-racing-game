@@ -423,3 +423,4 @@ Full release notes and development milestones.
 - `2025-08-08T13:19:20+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2025-08-12T22:22:11+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2025-08-14T13:01:59+05:00`: docs: add track geometry and collision documentation
+- `2025-08-15T21:43:09+05:00`: feat: tune anti-gravity hovering dampening physics
