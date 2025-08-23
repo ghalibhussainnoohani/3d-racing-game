@@ -429,3 +429,4 @@ Full release notes and development milestones.
 - `2025-08-21T21:35:35+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-08-23T22:59:47+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-08-23T12:07:14+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2025-08-23T18:15:16+05:00`: refactor: decouple HUD minimap rendering from main loop
