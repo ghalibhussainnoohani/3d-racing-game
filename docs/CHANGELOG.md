@@ -427,3 +427,4 @@ Full release notes and development milestones.
 - `2025-08-20T21:02:09+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2025-08-20T11:41:04+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-08-21T21:35:35+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2025-08-23T22:59:47+05:00`: feat: add customizable cockpit telemetry overlays
