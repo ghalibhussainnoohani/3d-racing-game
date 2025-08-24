@@ -430,3 +430,4 @@ Full release notes and development milestones.
 - `2025-08-23T22:59:47+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-08-23T12:07:14+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2025-08-23T18:15:16+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2025-08-24T18:22:36+05:00`: feat: introduce turbo energy consumption falloff curves
