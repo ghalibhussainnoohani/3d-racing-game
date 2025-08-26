@@ -433,3 +433,4 @@ Full release notes and development milestones.
 - `2025-08-24T18:22:36+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-08-24T14:32:00+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2025-08-25T13:37:46+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2025-08-26T15:02:24+05:00`: docs: add track geometry and collision documentation
