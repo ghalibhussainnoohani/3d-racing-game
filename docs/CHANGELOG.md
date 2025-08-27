@@ -435,3 +435,4 @@ Full release notes and development milestones.
 - `2025-08-25T13:37:46+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2025-08-26T15:02:24+05:00`: docs: add track geometry and collision documentation
 - `2025-08-27T18:41:09+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2025-08-27T15:41:34+05:00`: perf: optimize collision detection bounding volume hierarchy
