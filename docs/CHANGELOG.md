@@ -439,3 +439,4 @@ Full release notes and development milestones.
 - `2025-08-28T17:28:37+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-09-02T15:31:21+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-09-03T17:35:15+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
+- `2025-09-03T18:38:32+05:00`: perf: reduce garbage collection pauses during particle rendering
