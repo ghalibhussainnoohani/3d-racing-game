@@ -445,3 +445,4 @@ Full release notes and development milestones.
 - `2025-09-08T20:04:24+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-09-08T18:18:51+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-09-08T18:59:33+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2025-09-09T20:26:04+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
