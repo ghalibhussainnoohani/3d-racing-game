@@ -447,3 +447,4 @@ Full release notes and development milestones.
 - `2025-09-08T18:59:33+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-09-09T20:26:04+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-09-09T19:25:11+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2025-09-10T15:05:49+05:00`: fix: prevent racer overlap on narrow tunnel sections
