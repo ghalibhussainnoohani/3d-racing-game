@@ -448,3 +448,4 @@ Full release notes and development milestones.
 - `2025-09-09T20:26:04+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-09-09T19:25:11+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-09-10T15:05:49+05:00`: fix: prevent racer overlap on narrow tunnel sections
+- `2025-09-11T16:27:13+05:00`: refactor: clean up audio synthesizer oscillator voices
