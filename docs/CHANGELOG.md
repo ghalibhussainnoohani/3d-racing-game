@@ -453,3 +453,4 @@ Full release notes and development milestones.
 - `2025-09-12T16:54:09+05:00`: feat: implement procedural circuit color palette generator
 - `2025-09-12T20:29:12+05:00`: docs: add track geometry and collision documentation
 - `2025-09-15T16:15:48+05:00`: fix: prevent racer overlap on narrow tunnel sections
+- `2025-09-15T16:26:39+05:00`: refactor: decouple HUD minimap rendering from main loop
