@@ -455,3 +455,4 @@ Full release notes and development milestones.
 - `2025-09-15T16:15:48+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-09-15T16:26:39+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2025-09-17T22:39:50+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2025-09-17T16:04:48+05:00`: feat: add keyboard and gamepad input mapping handler
