@@ -458,3 +458,4 @@ Full release notes and development milestones.
 - `2025-09-17T16:04:48+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-09-17T19:55:22+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-09-18T16:32:32+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2025-09-18T11:40:34+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
