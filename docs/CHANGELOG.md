@@ -461,3 +461,4 @@ Full release notes and development milestones.
 - `2025-09-18T11:40:34+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-09-22T20:38:22+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2025-09-22T14:11:07+05:00`: fix: resolve camera clipping on steep banked curves
+- `2025-09-23T16:28:19+05:00`: fix: resolve camera clipping on steep banked curves
