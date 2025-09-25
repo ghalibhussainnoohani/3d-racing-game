@@ -464,3 +464,4 @@ Full release notes and development milestones.
 - `2025-09-23T16:28:19+05:00`: fix: resolve camera clipping on steep banked curves
 - `2025-09-23T14:52:25+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-09-23T13:30:17+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
+- `2025-09-25T13:13:43+05:00`: chore: clean up texture memory on level transitions
