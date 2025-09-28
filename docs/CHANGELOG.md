@@ -466,3 +466,4 @@ Full release notes and development milestones.
 - `2025-09-23T13:30:17+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-09-25T13:13:43+05:00`: chore: clean up texture memory on level transitions
 - `2025-09-25T16:58:55+05:00`: feat: introduce turbo energy consumption falloff curves
+- `2025-09-28T17:04:23+05:00`: feat: add customizable cockpit telemetry overlays
