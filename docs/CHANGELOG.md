@@ -468,3 +468,4 @@ Full release notes and development milestones.
 - `2025-09-25T16:58:55+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-09-28T17:04:23+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-09-28T21:27:11+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2025-09-30T21:23:44+05:00`: feat: add keyboard and gamepad input mapping handler
