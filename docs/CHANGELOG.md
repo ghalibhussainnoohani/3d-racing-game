@@ -470,3 +470,4 @@ Full release notes and development milestones.
 - `2025-09-28T21:27:11+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-09-30T21:23:44+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-09-30T22:20:25+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2025-10-08T11:47:34+05:00`: docs: add track geometry and collision documentation
