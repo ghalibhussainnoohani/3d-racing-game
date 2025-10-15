@@ -474,3 +474,4 @@ Full release notes and development milestones.
 - `2025-10-09T22:01:13+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-10-10T16:26:48+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2025-10-14T19:26:33+05:00`: feat: implement procedural circuit color palette generator
+- `2025-10-15T12:32:26+05:00`: feat: support responsive fullscreen aspect ratio resizing
