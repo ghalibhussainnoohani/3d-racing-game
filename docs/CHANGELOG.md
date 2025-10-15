@@ -475,3 +475,4 @@ Full release notes and development milestones.
 - `2025-10-10T16:26:48+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2025-10-14T19:26:33+05:00`: feat: implement procedural circuit color palette generator
 - `2025-10-15T12:32:26+05:00`: feat: support responsive fullscreen aspect ratio resizing
+- `2025-10-15T20:22:36+05:00`: feat: tune anti-gravity hovering dampening physics
