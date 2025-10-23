@@ -482,3 +482,4 @@ Full release notes and development milestones.
 - `2025-10-21T19:56:47+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-10-21T19:34:43+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-10-22T22:10:10+05:00`: docs: add track geometry and collision documentation
+- `2025-10-23T16:40:17+05:00`: perf: optimize collision detection bounding volume hierarchy
