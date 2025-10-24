@@ -487,3 +487,4 @@ Full release notes and development milestones.
 - `2025-10-23T18:31:58+05:00`: fix: resolve camera clipping on steep banked curves
 - `2025-10-24T13:39:38+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-10-24T12:52:52+05:00`: feat: add customizable cockpit telemetry overlays
+- `2025-10-24T13:48:58+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
