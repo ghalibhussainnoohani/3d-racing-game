@@ -485,3 +485,4 @@ Full release notes and development milestones.
 - `2025-10-23T16:40:17+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2025-10-23T20:11:49+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-10-23T18:31:58+05:00`: fix: resolve camera clipping on steep banked curves
+- `2025-10-24T13:39:38+05:00`: fix: normalize sound volume across procedural techno seeds
