@@ -489,3 +489,4 @@ Full release notes and development milestones.
 - `2025-10-24T12:52:52+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-10-24T13:48:58+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-10-27T16:22:07+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2025-10-27T17:51:29+05:00`: chore: clean up texture memory on level transitions
