@@ -492,3 +492,4 @@ Full release notes and development milestones.
 - `2025-10-27T17:51:29+05:00`: chore: clean up texture memory on level transitions
 - `2025-10-28T16:35:08+05:00`: docs: add track geometry and collision documentation
 - `2025-10-30T21:39:07+05:00`: docs: add track geometry and collision documentation
+- `2025-10-30T13:18:32+05:00`: refactor: decouple HUD minimap rendering from main loop
