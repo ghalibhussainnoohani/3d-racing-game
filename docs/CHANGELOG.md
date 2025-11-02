@@ -494,3 +494,4 @@ Full release notes and development milestones.
 - `2025-10-30T21:39:07+05:00`: docs: add track geometry and collision documentation
 - `2025-10-30T13:18:32+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2025-10-30T21:45:04+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2025-11-02T17:30:39+05:00`: refactor: clean up audio synthesizer oscillator voices
