@@ -496,3 +496,4 @@ Full release notes and development milestones.
 - `2025-10-30T21:45:04+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2025-11-02T17:30:39+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2025-11-02T11:56:52+05:00`: fix: prevent racer overlap on narrow tunnel sections
+- `2025-11-05T11:01:30+05:00`: fix: resolve camera clipping on steep banked curves
