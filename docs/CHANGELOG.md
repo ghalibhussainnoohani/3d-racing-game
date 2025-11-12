@@ -500,3 +500,4 @@ Full release notes and development milestones.
 - `2025-11-07T13:21:11+05:00`: chore: clean up texture memory on level transitions
 - `2025-11-10T19:40:30+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-11-10T15:01:19+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2025-11-12T17:19:06+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
