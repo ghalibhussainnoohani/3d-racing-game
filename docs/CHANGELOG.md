@@ -502,3 +502,4 @@ Full release notes and development milestones.
 - `2025-11-10T15:01:19+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-11-12T17:19:06+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-11-17T13:04:07+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2025-11-19T18:30:42+05:00`: docs: document WebGL rendering pipeline and game architecture
