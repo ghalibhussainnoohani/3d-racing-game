@@ -503,3 +503,4 @@ Full release notes and development milestones.
 - `2025-11-12T17:19:06+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-11-17T13:04:07+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-11-19T18:30:42+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2025-11-20T17:57:46+05:00`: feat: add keyboard and gamepad input mapping handler
