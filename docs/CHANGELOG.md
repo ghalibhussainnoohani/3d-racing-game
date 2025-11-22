@@ -505,3 +505,4 @@ Full release notes and development milestones.
 - `2025-11-19T18:30:42+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2025-11-20T17:57:46+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2025-11-22T16:04:46+05:00`: feat: add customizable cockpit telemetry overlays
+- `2025-11-22T12:12:57+05:00`: fix: normalize sound volume across procedural techno seeds
