@@ -507,3 +507,4 @@ Full release notes and development milestones.
 - `2025-11-22T16:04:46+05:00`: feat: add customizable cockpit telemetry overlays
 - `2025-11-22T12:12:57+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2025-11-24T22:38:36+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2025-11-24T13:49:08+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
