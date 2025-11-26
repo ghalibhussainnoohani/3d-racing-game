@@ -510,3 +510,4 @@ Full release notes and development milestones.
 - `2025-11-24T13:49:08+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-11-24T14:14:37+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2025-11-26T22:27:13+05:00`: feat: implement procedural circuit color palette generator
+- `2025-11-26T20:19:05+05:00`: feat: introduce turbo energy consumption falloff curves
