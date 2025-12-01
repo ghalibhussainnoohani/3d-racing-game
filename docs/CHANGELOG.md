@@ -513,3 +513,4 @@ Full release notes and development milestones.
 - `2025-11-26T20:19:05+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-11-28T20:58:05+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2025-11-29T20:00:44+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2025-12-01T11:57:28+05:00`: refactor: decouple HUD minimap rendering from main loop
