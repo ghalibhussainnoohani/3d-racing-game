@@ -515,3 +515,4 @@ Full release notes and development milestones.
 - `2025-11-29T20:00:44+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2025-12-01T11:57:28+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2025-12-01T22:13:42+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2025-12-02T17:39:05+05:00`: refactor: clean up audio synthesizer oscillator voices
