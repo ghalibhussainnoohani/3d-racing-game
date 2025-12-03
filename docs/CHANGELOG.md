@@ -517,3 +517,4 @@ Full release notes and development milestones.
 - `2025-12-01T22:13:42+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2025-12-02T17:39:05+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2025-12-03T15:36:57+05:00`: fix: resolve camera clipping on steep banked curves
+- `2025-12-03T17:56:19+05:00`: feat: introduce turbo energy consumption falloff curves
