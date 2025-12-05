@@ -519,3 +519,4 @@ Full release notes and development milestones.
 - `2025-12-03T15:36:57+05:00`: fix: resolve camera clipping on steep banked curves
 - `2025-12-03T17:56:19+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-12-05T14:51:13+05:00`: feat: introduce turbo energy consumption falloff curves
+- `2025-12-05T15:11:18+05:00`: docs: document WebGL rendering pipeline and game architecture
