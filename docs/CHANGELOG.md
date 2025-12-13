@@ -523,3 +523,4 @@ Full release notes and development milestones.
 - `2025-12-11T14:36:38+05:00`: fix: resolve camera clipping on steep banked curves
 - `2025-12-12T22:14:40+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2025-12-13T11:55:10+05:00`: feat: support responsive fullscreen aspect ratio resizing
+- `2025-12-13T11:56:01+05:00`: fix: resolve camera clipping on steep banked curves
