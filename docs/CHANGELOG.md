@@ -527,3 +527,4 @@ Full release notes and development milestones.
 - `2025-12-16T11:36:38+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2025-12-17T14:57:40+05:00`: fix: resolve camera clipping on steep banked curves
 - `2025-12-17T22:06:57+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
+- `2025-12-17T20:18:49+05:00`: feat: introduce turbo energy consumption falloff curves
