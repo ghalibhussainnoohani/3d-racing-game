@@ -529,3 +529,4 @@ Full release notes and development milestones.
 - `2025-12-17T22:06:57+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-12-17T20:18:49+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-12-23T22:47:06+05:00`: perf: optimize collision detection bounding volume hierarchy
+- `2025-12-23T15:38:26+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
