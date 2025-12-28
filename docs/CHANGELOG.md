@@ -536,3 +536,4 @@ Full release notes and development milestones.
 - `2025-12-25T11:40:54+05:00`: feat: implement procedural circuit color palette generator
 - `2025-12-25T12:12:51+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2025-12-25T18:19:54+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2025-12-28T11:49:29+05:00`: feat: introduce turbo energy consumption falloff curves
