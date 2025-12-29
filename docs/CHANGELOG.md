@@ -538,3 +538,4 @@ Full release notes and development milestones.
 - `2025-12-25T18:19:54+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2025-12-28T11:49:29+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2025-12-29T22:02:53+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2025-12-29T18:13:06+05:00`: fix: resolve camera clipping on steep banked curves
