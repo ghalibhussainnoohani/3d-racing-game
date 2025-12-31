@@ -540,3 +540,4 @@ Full release notes and development milestones.
 - `2025-12-29T22:02:53+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2025-12-29T18:13:06+05:00`: fix: resolve camera clipping on steep banked curves
 - `2025-12-31T12:45:33+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2025-12-31T13:25:15+05:00`: feat: tune anti-gravity hovering dampening physics
