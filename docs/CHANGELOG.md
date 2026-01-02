@@ -545,3 +545,4 @@ Full release notes and development milestones.
 - `2026-01-01T20:18:44+05:00`: feat: implement procedural circuit color palette generator
 - `2026-01-01T15:06:40+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-01-01T16:51:53+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2026-01-02T21:07:46+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
