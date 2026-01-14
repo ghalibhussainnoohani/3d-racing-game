@@ -553,3 +553,4 @@ Full release notes and development milestones.
 - `2026-01-09T15:55:15+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2026-01-13T21:30:04+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2026-01-13T12:10:57+05:00`: chore: clean up texture memory on level transitions
+- `2026-01-14T11:30:28+05:00`: perf: optimize collision detection bounding volume hierarchy
