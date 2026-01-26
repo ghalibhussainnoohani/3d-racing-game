@@ -560,3 +560,4 @@ Full release notes and development milestones.
 - `2026-01-20T15:02:11+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2026-01-26T18:39:12+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2026-01-26T11:39:56+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2026-01-26T20:57:52+05:00`: docs: add track geometry and collision documentation
