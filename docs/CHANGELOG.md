@@ -567,3 +567,4 @@ Full release notes and development milestones.
 - `2026-02-03T20:35:20+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2026-02-03T11:30:56+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-02-03T12:19:41+05:00`: feat: add customizable cockpit telemetry overlays
+- `2026-02-05T21:36:20+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
