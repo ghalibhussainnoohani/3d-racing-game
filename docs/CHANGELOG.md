@@ -571,3 +571,4 @@ Full release notes and development milestones.
 - `2026-02-08T19:11:48+05:00`: feat: add customizable cockpit telemetry overlays
 - `2026-02-08T18:58:22+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2026-02-09T19:37:40+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2026-02-09T18:44:54+05:00`: perf: optimize collision detection bounding volume hierarchy
