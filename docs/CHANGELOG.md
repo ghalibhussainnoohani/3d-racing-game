@@ -574,3 +574,4 @@ Full release notes and development milestones.
 - `2026-02-09T18:44:54+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2026-02-10T17:52:34+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2026-02-10T20:52:51+05:00`: feat: support responsive fullscreen aspect ratio resizing
+- `2026-02-10T13:54:52+05:00`: chore: clean up texture memory on level transitions
