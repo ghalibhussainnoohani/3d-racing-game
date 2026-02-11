@@ -575,3 +575,4 @@ Full release notes and development milestones.
 - `2026-02-10T17:52:34+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2026-02-10T20:52:51+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2026-02-10T13:54:52+05:00`: chore: clean up texture memory on level transitions
+- `2026-02-11T15:22:00+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
