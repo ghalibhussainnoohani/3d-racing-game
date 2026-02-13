@@ -579,3 +579,4 @@ Full release notes and development milestones.
 - `2026-02-12T19:50:17+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-02-12T17:28:37+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2026-02-13T12:56:05+05:00`: fix: resolve camera clipping on steep banked curves
+- `2026-02-13T12:48:43+05:00`: fix: prevent racer overlap on narrow tunnel sections
