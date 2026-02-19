@@ -584,3 +584,4 @@ Full release notes and development milestones.
 - `2026-02-14T22:16:10+05:00`: docs: add track geometry and collision documentation
 - `2026-02-16T21:24:20+05:00`: feat: implement procedural circuit color palette generator
 - `2026-02-17T20:09:44+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
+- `2026-02-19T18:09:30+05:00`: feat: tune anti-gravity hovering dampening physics
