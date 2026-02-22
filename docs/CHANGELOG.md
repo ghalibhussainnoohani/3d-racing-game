@@ -587,3 +587,4 @@ Full release notes and development milestones.
 - `2026-02-19T18:09:30+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2026-02-20T15:27:19+05:00`: feat: add customizable cockpit telemetry overlays
 - `2026-02-20T12:51:17+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2026-02-22T21:36:34+05:00`: fix: normalize sound volume across procedural techno seeds
