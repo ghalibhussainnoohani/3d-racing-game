@@ -589,3 +589,4 @@ Full release notes and development milestones.
 - `2026-02-20T12:51:17+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2026-02-22T21:36:34+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2026-02-22T21:27:45+05:00`: chore: clean up texture memory on level transitions
+- `2026-02-23T19:54:34+05:00`: chore: clean up texture memory on level transitions
