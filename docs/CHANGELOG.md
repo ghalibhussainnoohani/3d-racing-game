@@ -593,3 +593,4 @@ Full release notes and development milestones.
 - `2026-02-23T22:27:29+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2026-02-24T11:06:02+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2026-02-24T16:55:04+05:00`: fix: resolve camera clipping on steep banked curves
+- `2026-02-24T12:04:06+05:00`: feat: introduce turbo energy consumption falloff curves
