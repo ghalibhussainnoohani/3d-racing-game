@@ -591,3 +591,4 @@ Full release notes and development milestones.
 - `2026-02-22T21:27:45+05:00`: chore: clean up texture memory on level transitions
 - `2026-02-23T19:54:34+05:00`: chore: clean up texture memory on level transitions
 - `2026-02-23T22:27:29+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2026-02-24T11:06:02+05:00`: feat: introduce turbo energy consumption falloff curves
