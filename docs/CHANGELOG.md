@@ -596,3 +596,4 @@ Full release notes and development milestones.
 - `2026-02-24T12:04:06+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2026-02-25T21:00:40+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2026-02-25T16:05:38+05:00`: feat: introduce turbo energy consumption falloff curves
+- `2026-02-27T20:08:56+05:00`: perf: optimize collision detection bounding volume hierarchy
