@@ -598,3 +598,4 @@ Full release notes and development milestones.
 - `2026-02-25T16:05:38+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2026-02-27T20:08:56+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2026-03-03T18:19:27+05:00`: feat: implement procedural circuit color palette generator
+- `2026-03-03T11:48:33+05:00`: fix: normalize sound volume across procedural techno seeds
