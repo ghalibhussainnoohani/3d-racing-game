@@ -601,3 +601,4 @@ Full release notes and development milestones.
 - `2026-03-03T11:48:33+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2026-03-03T16:19:37+05:00`: docs: add track geometry and collision documentation
 - `2026-03-04T12:14:07+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2026-03-04T11:40:16+05:00`: perf: optimize collision detection bounding volume hierarchy
