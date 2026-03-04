@@ -600,3 +600,4 @@ Full release notes and development milestones.
 - `2026-03-03T18:19:27+05:00`: feat: implement procedural circuit color palette generator
 - `2026-03-03T11:48:33+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2026-03-03T16:19:37+05:00`: docs: add track geometry and collision documentation
+- `2026-03-04T12:14:07+05:00`: feat: add keyboard and gamepad input mapping handler
