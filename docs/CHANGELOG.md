@@ -604,3 +604,4 @@ Full release notes and development milestones.
 - `2026-03-04T11:40:16+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2026-03-05T16:05:49+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2026-03-06T22:43:22+05:00`: feat: implement procedural circuit color palette generator
+- `2026-03-12T19:26:43+05:00`: fix: correct velocity decay when grazing rough track shoulders
