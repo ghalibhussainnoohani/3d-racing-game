@@ -610,3 +610,4 @@ Full release notes and development milestones.
 - `2026-03-16T15:04:18+05:00`: feat: implement procedural circuit color palette generator
 - `2026-03-17T12:32:27+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2026-03-17T11:47:46+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2026-03-20T18:22:41+05:00`: docs: document WebGL rendering pipeline and game architecture
