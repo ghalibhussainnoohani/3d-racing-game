@@ -613,3 +613,4 @@ Full release notes and development milestones.
 - `2026-03-20T18:22:41+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2026-03-27T16:34:37+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2026-03-27T12:06:31+05:00`: feat: introduce turbo energy consumption falloff curves
+- `2026-03-30T19:09:53+05:00`: feat: add keyboard and gamepad input mapping handler
