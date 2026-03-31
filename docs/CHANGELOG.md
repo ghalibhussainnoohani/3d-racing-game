@@ -614,3 +614,4 @@ Full release notes and development milestones.
 - `2026-03-27T16:34:37+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2026-03-27T12:06:31+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2026-03-30T19:09:53+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2026-03-31T13:50:54+05:00`: refactor: decouple HUD minimap rendering from main loop
