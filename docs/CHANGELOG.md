@@ -621,3 +621,4 @@ Full release notes and development milestones.
 - `2026-04-06T18:26:44+05:00`: feat: implement procedural circuit color palette generator
 - `2026-04-07T18:56:46+05:00`: feat: add customizable cockpit telemetry overlays
 - `2026-04-07T11:00:08+05:00`: docs: add track geometry and collision documentation
+- `2026-04-07T22:19:09+05:00`: feat: add customizable cockpit telemetry overlays
