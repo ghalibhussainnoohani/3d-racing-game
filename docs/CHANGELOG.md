@@ -627,3 +627,4 @@ Full release notes and development milestones.
 - `2026-04-10T15:23:12+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2026-04-12T13:24:57+05:00`: docs: add track geometry and collision documentation
 - `2026-04-13T16:50:48+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2026-04-13T11:12:38+05:00`: fix: correct velocity decay when grazing rough track shoulders
