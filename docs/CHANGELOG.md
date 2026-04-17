@@ -630,3 +630,4 @@ Full release notes and development milestones.
 - `2026-04-13T11:12:38+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-04-17T11:10:00+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2026-04-17T16:24:28+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2026-04-17T19:31:02+05:00`: fix: correct velocity decay when grazing rough track shoulders
