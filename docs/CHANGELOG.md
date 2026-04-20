@@ -632,3 +632,4 @@ Full release notes and development milestones.
 - `2026-04-17T16:24:28+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-04-17T19:31:02+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-04-20T20:51:54+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
+- `2026-04-20T12:51:29+05:00`: feat: add keyboard and gamepad input mapping handler
