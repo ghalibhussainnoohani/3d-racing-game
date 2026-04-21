@@ -633,3 +633,4 @@ Full release notes and development milestones.
 - `2026-04-17T19:31:02+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-04-20T20:51:54+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2026-04-20T12:51:29+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2026-04-21T20:03:36+05:00`: docs: document WebGL rendering pipeline and game architecture
