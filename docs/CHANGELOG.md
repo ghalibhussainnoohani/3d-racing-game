@@ -636,3 +636,4 @@ Full release notes and development milestones.
 - `2026-04-21T20:03:36+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2026-04-24T11:57:00+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2026-04-24T11:40:48+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2026-04-25T19:51:26+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
