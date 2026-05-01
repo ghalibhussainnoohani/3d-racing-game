@@ -645,3 +645,4 @@ Full release notes and development milestones.
 - `2026-04-29T14:33:39+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-05-01T17:23:23+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2026-05-01T15:19:03+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2026-05-01T11:30:16+05:00`: feat: support responsive fullscreen aspect ratio resizing
