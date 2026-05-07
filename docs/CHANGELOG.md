@@ -649,3 +649,4 @@ Full release notes and development milestones.
 - `2026-05-04T15:10:09+05:00`: fix: resolve camera clipping on steep banked curves
 - `2026-05-06T12:40:59+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2026-05-06T14:30:28+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2026-05-07T18:42:49+05:00`: chore: clean up texture memory on level transitions
