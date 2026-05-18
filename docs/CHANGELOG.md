@@ -653,3 +653,4 @@ Full release notes and development milestones.
 - `2026-05-09T13:52:30+05:00`: feat: implement procedural circuit color palette generator
 - `2026-05-09T22:28:12+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2026-05-15T17:33:41+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2026-05-18T20:14:13+05:00`: feat: add customizable cockpit telemetry overlays
