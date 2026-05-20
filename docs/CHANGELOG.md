@@ -655,3 +655,4 @@ Full release notes and development milestones.
 - `2026-05-15T17:33:41+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2026-05-18T20:14:13+05:00`: feat: add customizable cockpit telemetry overlays
 - `2026-05-18T22:17:55+05:00`: feat: add customizable cockpit telemetry overlays
+- `2026-05-20T13:16:08+05:00`: fix: normalize sound volume across procedural techno seeds
