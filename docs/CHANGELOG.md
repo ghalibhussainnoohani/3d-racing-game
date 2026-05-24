@@ -656,3 +656,4 @@ Full release notes and development milestones.
 - `2026-05-18T20:14:13+05:00`: feat: add customizable cockpit telemetry overlays
 - `2026-05-18T22:17:55+05:00`: feat: add customizable cockpit telemetry overlays
 - `2026-05-20T13:16:08+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2026-05-24T17:06:03+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
