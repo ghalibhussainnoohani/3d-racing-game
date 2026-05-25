@@ -658,3 +658,4 @@ Full release notes and development milestones.
 - `2026-05-20T13:16:08+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2026-05-24T17:06:03+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2026-05-25T13:31:17+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2026-05-25T21:32:20+05:00`: feat: tune anti-gravity hovering dampening physics
