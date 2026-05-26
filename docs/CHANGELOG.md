@@ -661,3 +661,4 @@ Full release notes and development milestones.
 - `2026-05-25T21:32:20+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2026-05-25T17:31:54+05:00`: fix: resolve camera clipping on steep banked curves
 - `2026-05-26T15:08:11+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2026-05-26T21:17:35+05:00`: feat: tune anti-gravity hovering dampening physics
