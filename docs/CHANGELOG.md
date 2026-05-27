@@ -663,3 +663,4 @@ Full release notes and development milestones.
 - `2026-05-26T15:08:11+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2026-05-26T21:17:35+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2026-05-27T18:38:10+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2026-05-27T14:46:42+05:00`: fix: correct velocity decay when grazing rough track shoulders
