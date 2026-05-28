@@ -666,3 +666,4 @@ Full release notes and development milestones.
 - `2026-05-27T14:46:42+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-05-27T22:02:36+05:00`: feat: implement procedural circuit color palette generator
 - `2026-05-28T11:14:52+05:00`: fix: correct velocity decay when grazing rough track shoulders
+- `2026-05-28T11:41:00+05:00`: docs: add track geometry and collision documentation
