@@ -665,3 +665,4 @@ Full release notes and development milestones.
 - `2026-05-27T18:38:10+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2026-05-27T14:46:42+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-05-27T22:02:36+05:00`: feat: implement procedural circuit color palette generator
+- `2026-05-28T11:14:52+05:00`: fix: correct velocity decay when grazing rough track shoulders
