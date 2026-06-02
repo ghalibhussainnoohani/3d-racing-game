@@ -670,3 +670,4 @@ Full release notes and development milestones.
 - `2026-05-29T21:40:19+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2026-06-02T13:50:33+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2026-06-02T14:54:09+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2026-06-02T11:06:47+05:00`: chore: clean up texture memory on level transitions
