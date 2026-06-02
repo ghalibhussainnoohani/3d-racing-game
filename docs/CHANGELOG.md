@@ -668,3 +668,4 @@ Full release notes and development milestones.
 - `2026-05-28T11:14:52+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-05-28T11:41:00+05:00`: docs: add track geometry and collision documentation
 - `2026-05-29T21:40:19+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2026-06-02T13:50:33+05:00`: feat: support responsive fullscreen aspect ratio resizing
