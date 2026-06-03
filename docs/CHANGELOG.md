@@ -672,3 +672,4 @@ Full release notes and development milestones.
 - `2026-06-02T14:54:09+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2026-06-02T11:06:47+05:00`: chore: clean up texture memory on level transitions
 - `2026-06-03T12:28:50+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2026-06-03T13:36:43+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
