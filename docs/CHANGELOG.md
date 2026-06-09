@@ -677,3 +677,4 @@ Full release notes and development milestones.
 - `2026-06-04T12:56:45+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-06-08T16:09:57+05:00`: docs: add track geometry and collision documentation
 - `2026-06-09T13:45:14+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2026-06-09T14:04:05+05:00`: perf: reduce garbage collection pauses during particle rendering
