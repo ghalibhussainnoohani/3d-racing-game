@@ -676,3 +676,4 @@ Full release notes and development milestones.
 - `2026-06-04T13:41:27+05:00`: chore: clean up texture memory on level transitions
 - `2026-06-04T12:56:45+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-06-08T16:09:57+05:00`: docs: add track geometry and collision documentation
+- `2026-06-09T13:45:14+05:00`: docs: document WebGL rendering pipeline and game architecture
