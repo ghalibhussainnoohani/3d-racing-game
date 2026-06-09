@@ -678,3 +678,4 @@ Full release notes and development milestones.
 - `2026-06-08T16:09:57+05:00`: docs: add track geometry and collision documentation
 - `2026-06-09T13:45:14+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2026-06-09T14:04:05+05:00`: perf: reduce garbage collection pauses during particle rendering
+- `2026-06-09T16:28:01+05:00`: feat: introduce turbo energy consumption falloff curves
