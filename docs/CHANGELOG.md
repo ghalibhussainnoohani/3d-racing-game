@@ -680,3 +680,4 @@ Full release notes and development milestones.
 - `2026-06-09T14:04:05+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2026-06-09T16:28:01+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2026-06-16T22:27:20+05:00`: docs: add track geometry and collision documentation
+- `2026-06-16T22:26:36+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
