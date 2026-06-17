@@ -681,3 +681,4 @@ Full release notes and development milestones.
 - `2026-06-09T16:28:01+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2026-06-16T22:27:20+05:00`: docs: add track geometry and collision documentation
 - `2026-06-16T22:26:36+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2026-06-17T17:49:03+05:00`: feat: add keyboard and gamepad input mapping handler
