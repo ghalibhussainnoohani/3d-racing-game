@@ -683,3 +683,4 @@ Full release notes and development milestones.
 - `2026-06-16T22:26:36+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-06-17T17:49:03+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2026-06-18T15:38:50+05:00`: docs: add track geometry and collision documentation
+- `2026-06-18T17:22:58+05:00`: fix: prevent racer overlap on narrow tunnel sections
