@@ -685,3 +685,4 @@ Full release notes and development milestones.
 - `2026-06-18T15:38:50+05:00`: docs: add track geometry and collision documentation
 - `2026-06-18T17:22:58+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2026-06-22T21:07:10+05:00`: fix: prevent racer overlap on narrow tunnel sections
+- `2026-06-25T15:39:55+05:00`: docs: add track geometry and collision documentation
