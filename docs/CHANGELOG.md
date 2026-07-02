@@ -694,3 +694,4 @@ Full release notes and development milestones.
 - `2026-06-30T14:29:31+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2026-07-01T19:23:39+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2026-07-02T19:28:14+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2026-07-02T17:22:43+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
