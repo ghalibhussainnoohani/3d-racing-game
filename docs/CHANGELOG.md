@@ -696,3 +696,4 @@ Full release notes and development milestones.
 - `2026-07-02T19:28:14+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2026-07-02T17:22:43+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-07-07T21:07:34+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2026-07-07T13:23:43+05:00`: feat: add keyboard and gamepad input mapping handler
