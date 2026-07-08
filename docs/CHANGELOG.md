@@ -698,3 +698,4 @@ Full release notes and development milestones.
 - `2026-07-07T21:07:34+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2026-07-07T13:23:43+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2026-07-07T21:03:39+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2026-07-08T14:04:28+05:00`: perf: optimize collision detection bounding volume hierarchy
