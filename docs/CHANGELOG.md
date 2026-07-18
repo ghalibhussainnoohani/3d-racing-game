@@ -702,3 +702,4 @@ Full release notes and development milestones.
 - `2026-07-08T12:09:12+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2026-07-17T18:56:35+05:00`: feat: implement procedural circuit color palette generator
 - `2026-07-18T11:52:22+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2026-07-18T17:35:51+05:00`: chore: clean up texture memory on level transitions
