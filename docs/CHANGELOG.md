@@ -707,3 +707,4 @@ Full release notes and development milestones.
 - `2026-07-21T16:48:12+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2026-07-21T16:54:23+05:00`: feat: implement procedural circuit color palette generator
 - `2026-07-23T16:16:07+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
+- `2026-07-23T17:18:54+05:00`: perf: optimize collision detection bounding volume hierarchy
