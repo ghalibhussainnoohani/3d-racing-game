@@ -710,3 +710,4 @@ Full release notes and development milestones.
 - `2026-07-23T17:18:54+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2026-07-24T11:47:53+05:00`: fix: resolve camera clipping on steep banked curves
 - `2026-07-27T19:46:58+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2026-07-27T19:20:23+05:00`: fix: prevent racer overlap on narrow tunnel sections
