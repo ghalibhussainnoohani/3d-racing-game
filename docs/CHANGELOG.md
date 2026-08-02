@@ -716,3 +716,4 @@ Full release notes and development milestones.
 - `2026-07-29T20:05:57+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2026-07-31T13:43:15+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2026-07-31T18:11:54+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2026-08-02T15:18:17+05:00`: feat: support responsive fullscreen aspect ratio resizing
