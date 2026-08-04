@@ -719,3 +719,4 @@ Full release notes and development milestones.
 - `2026-08-02T15:18:17+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2026-08-03T14:09:27+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-08-03T14:50:28+05:00`: feat: support responsive fullscreen aspect ratio resizing
+- `2026-08-04T12:53:19+05:00`: chore: clean up texture memory on level transitions
