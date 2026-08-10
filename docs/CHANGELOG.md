@@ -722,3 +722,4 @@ Full release notes and development milestones.
 - `2026-08-04T12:53:19+05:00`: chore: clean up texture memory on level transitions
 - `2026-08-04T13:31:55+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2026-08-05T18:58:19+05:00`: feat: add customizable cockpit telemetry overlays
+- `2026-08-10T13:56:27+05:00`: refactor: clean up audio synthesizer oscillator voices
