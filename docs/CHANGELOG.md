@@ -723,3 +723,4 @@ Full release notes and development milestones.
 - `2026-08-04T13:31:55+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2026-08-05T18:58:19+05:00`: feat: add customizable cockpit telemetry overlays
 - `2026-08-10T13:56:27+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2026-08-11T14:32:41+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
