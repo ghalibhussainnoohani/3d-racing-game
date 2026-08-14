@@ -726,3 +726,4 @@ Full release notes and development milestones.
 - `2026-08-11T14:32:41+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2026-08-11T16:20:10+05:00`: feat: implement procedural circuit color palette generator
 - `2026-08-11T12:30:43+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2026-08-14T11:18:36+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
