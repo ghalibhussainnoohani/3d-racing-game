@@ -729,3 +729,4 @@ Full release notes and development milestones.
 - `2026-08-14T11:18:36+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2026-08-15T17:30:32+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-08-17T14:10:31+05:00`: docs: add track geometry and collision documentation
+- `2026-08-18T16:10:16+05:00`: docs: add track geometry and collision documentation
