@@ -731,3 +731,4 @@ Full release notes and development milestones.
 - `2026-08-17T14:10:31+05:00`: docs: add track geometry and collision documentation
 - `2026-08-18T16:10:16+05:00`: docs: add track geometry and collision documentation
 - `2026-08-19T22:31:01+05:00`: feat: add customizable cockpit telemetry overlays
+- `2026-08-20T16:41:50+05:00`: feat: tune anti-gravity hovering dampening physics
