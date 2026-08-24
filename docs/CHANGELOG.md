@@ -733,3 +733,4 @@ Full release notes and development milestones.
 - `2026-08-19T22:31:01+05:00`: feat: add customizable cockpit telemetry overlays
 - `2026-08-20T16:41:50+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2026-08-24T16:37:27+05:00`: fix: resolve camera clipping on steep banked curves
+- `2026-08-24T17:12:11+05:00`: chore: clean up texture memory on level transitions
