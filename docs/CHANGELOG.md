@@ -735,3 +735,4 @@ Full release notes and development milestones.
 - `2026-08-24T16:37:27+05:00`: fix: resolve camera clipping on steep banked curves
 - `2026-08-24T17:12:11+05:00`: chore: clean up texture memory on level transitions
 - `2026-08-24T20:31:49+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2026-08-25T22:55:38+05:00`: feat: introduce turbo energy consumption falloff curves
