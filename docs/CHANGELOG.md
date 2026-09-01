@@ -739,3 +739,4 @@ Full release notes and development milestones.
 - `2026-08-25T19:39:23+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2026-08-31T18:18:05+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-09-01T16:49:52+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2026-09-01T14:12:20+05:00`: docs: document WebGL rendering pipeline and game architecture
