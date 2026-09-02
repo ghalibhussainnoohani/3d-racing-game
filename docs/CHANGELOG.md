@@ -741,3 +741,4 @@ Full release notes and development milestones.
 - `2026-09-01T16:49:52+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2026-09-01T14:12:20+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2026-09-02T17:23:17+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2026-09-02T13:45:43+05:00`: feat: introduce turbo energy consumption falloff curves
