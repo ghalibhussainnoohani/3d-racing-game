@@ -747,3 +747,4 @@ Full release notes and development milestones.
 - `2026-09-07T12:24:14+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-09-08T22:17:43+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-09-10T18:48:09+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2026-09-12T13:47:20+05:00`: fix: normalize sound volume across procedural techno seeds
