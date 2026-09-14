@@ -750,3 +750,4 @@ Full release notes and development milestones.
 - `2026-09-12T13:47:20+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2026-09-12T22:58:27+05:00`: fix: prevent racer overlap on narrow tunnel sections
 - `2026-09-13T11:56:31+05:00`: feat: add keyboard and gamepad input mapping handler
+- `2026-09-14T15:01:58+05:00`: fix: correct velocity decay when grazing rough track shoulders
