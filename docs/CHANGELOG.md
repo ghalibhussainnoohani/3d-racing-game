@@ -752,3 +752,4 @@ Full release notes and development milestones.
 - `2026-09-13T11:56:31+05:00`: feat: add keyboard and gamepad input mapping handler
 - `2026-09-14T15:01:58+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-09-15T13:57:30+05:00`: feat: tune anti-gravity hovering dampening physics
+- `2026-09-15T19:15:08+05:00`: fix: resolve camera clipping on steep banked curves
