@@ -753,3 +753,4 @@ Full release notes and development milestones.
 - `2026-09-14T15:01:58+05:00`: fix: correct velocity decay when grazing rough track shoulders
 - `2026-09-15T13:57:30+05:00`: feat: tune anti-gravity hovering dampening physics
 - `2026-09-15T19:15:08+05:00`: fix: resolve camera clipping on steep banked curves
+- `2026-09-15T15:33:38+05:00`: perf: reduce garbage collection pauses during particle rendering
