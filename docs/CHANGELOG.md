@@ -756,3 +756,4 @@ Full release notes and development milestones.
 - `2026-09-15T15:33:38+05:00`: perf: reduce garbage collection pauses during particle rendering
 - `2026-09-16T21:12:11+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2026-09-16T20:57:12+05:00`: refactor: decouple HUD minimap rendering from main loop
+- `2026-09-17T19:06:18+05:00`: chore: clean up texture memory on level transitions
