@@ -758,3 +758,4 @@ Full release notes and development milestones.
 - `2026-09-16T20:57:12+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2026-09-17T19:06:18+05:00`: chore: clean up texture memory on level transitions
 - `2026-09-23T15:46:14+05:00`: feat: implement procedural circuit color palette generator
+- `2026-09-27T20:51:25+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
