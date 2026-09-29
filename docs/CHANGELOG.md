@@ -760,3 +760,4 @@ Full release notes and development milestones.
 - `2026-09-23T15:46:14+05:00`: feat: implement procedural circuit color palette generator
 - `2026-09-27T20:51:25+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2026-09-29T16:19:08+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2026-09-29T14:54:19+05:00`: refactor: clean up audio synthesizer oscillator voices
