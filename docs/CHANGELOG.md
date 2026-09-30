@@ -761,3 +761,4 @@ Full release notes and development milestones.
 - `2026-09-27T20:51:25+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2026-09-29T16:19:08+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2026-09-29T14:54:19+05:00`: refactor: clean up audio synthesizer oscillator voices
+- `2026-09-30T18:36:27+05:00`: docs: add track geometry and collision documentation
