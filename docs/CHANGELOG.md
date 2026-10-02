@@ -762,3 +762,4 @@ Full release notes and development milestones.
 - `2026-09-29T16:19:08+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2026-09-29T14:54:19+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2026-09-30T18:36:27+05:00`: docs: add track geometry and collision documentation
+- `2026-10-02T21:51:40+05:00`: fix: normalize sound volume across procedural techno seeds
