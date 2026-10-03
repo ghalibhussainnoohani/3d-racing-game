@@ -763,3 +763,4 @@ Full release notes and development milestones.
 - `2026-09-29T14:54:19+05:00`: refactor: clean up audio synthesizer oscillator voices
 - `2026-09-30T18:36:27+05:00`: docs: add track geometry and collision documentation
 - `2026-10-02T21:51:40+05:00`: fix: normalize sound volume across procedural techno seeds
+- `2026-10-03T18:18:53+05:00`: perf: optimize collision detection bounding volume hierarchy
