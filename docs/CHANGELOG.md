@@ -765,3 +765,4 @@ Full release notes and development milestones.
 - `2026-10-02T21:51:40+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2026-10-03T18:18:53+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2026-10-05T14:46:27+05:00`: docs: add track geometry and collision documentation
+- `2026-10-06T20:28:03+05:00`: fix: normalize sound volume across procedural techno seeds
