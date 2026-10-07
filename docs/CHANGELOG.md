@@ -768,3 +768,4 @@ Full release notes and development milestones.
 - `2026-10-06T20:28:03+05:00`: fix: normalize sound volume across procedural techno seeds
 - `2026-10-07T12:24:55+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-10-07T13:37:06+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2026-10-07T21:54:24+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
