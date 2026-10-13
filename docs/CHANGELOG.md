@@ -770,3 +770,4 @@ Full release notes and development milestones.
 - `2026-10-07T13:37:06+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-10-07T21:54:24+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2026-10-08T16:38:52+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2026-10-13T21:48:04+05:00`: chore: clean up texture memory on level transitions
