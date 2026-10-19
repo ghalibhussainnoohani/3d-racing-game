@@ -775,3 +775,4 @@ Full release notes and development milestones.
 - `2026-10-16T14:20:41+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2026-10-16T12:55:52+05:00`: refactor: decouple HUD minimap rendering from main loop
 - `2026-10-19T14:41:08+05:00`: feat: implement procedural circuit color palette generator
+- `2026-10-19T18:59:08+05:00`: perf: optimize collision detection bounding volume hierarchy
