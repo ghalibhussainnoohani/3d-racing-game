@@ -777,3 +777,4 @@ Full release notes and development milestones.
 - `2026-10-19T14:41:08+05:00`: feat: implement procedural circuit color palette generator
 - `2026-10-19T18:59:08+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2026-10-20T11:35:45+05:00`: docs: document WebGL rendering pipeline and game architecture
+- `2026-10-22T11:22:18+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
