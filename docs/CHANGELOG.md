@@ -780,3 +780,4 @@ Full release notes and development milestones.
 - `2026-10-22T11:22:18+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-10-22T13:21:59+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2026-10-25T16:03:37+05:00`: perf: optimize collision detection bounding volume hierarchy
+- `2026-10-25T12:56:02+05:00`: docs: document WebGL rendering pipeline and game architecture
