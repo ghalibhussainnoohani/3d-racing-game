@@ -782,3 +782,4 @@ Full release notes and development milestones.
 - `2026-10-25T16:03:37+05:00`: perf: optimize collision detection bounding volume hierarchy
 - `2026-10-25T12:56:02+05:00`: docs: document WebGL rendering pipeline and game architecture
 - `2026-10-26T22:05:42+05:00`: feat: implement procedural circuit color palette generator
+- `2026-10-26T12:00:49+05:00`: feat: introduce turbo energy consumption falloff curves
