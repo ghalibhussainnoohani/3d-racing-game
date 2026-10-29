@@ -784,3 +784,4 @@ Full release notes and development milestones.
 - `2026-10-26T22:05:42+05:00`: feat: implement procedural circuit color palette generator
 - `2026-10-26T12:00:49+05:00`: feat: introduce turbo energy consumption falloff curves
 - `2026-10-26T13:01:36+05:00`: fix: resolve camera clipping on steep banked curves
+- `2026-10-29T21:33:55+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
