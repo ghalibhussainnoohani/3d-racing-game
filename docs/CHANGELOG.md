@@ -786,3 +786,4 @@ Full release notes and development milestones.
 - `2026-10-26T13:01:36+05:00`: fix: resolve camera clipping on steep banked curves
 - `2026-10-29T21:33:55+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2026-10-29T11:28:11+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
+- `2026-10-30T22:54:40+05:00`: feat: support responsive fullscreen aspect ratio resizing
