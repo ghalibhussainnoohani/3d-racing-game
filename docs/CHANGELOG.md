@@ -788,3 +788,4 @@ Full release notes and development milestones.
 - `2026-10-29T11:28:11+05:00`: perf: optimize track mesh vertex buffer for mobile GPUs
 - `2026-10-30T22:54:40+05:00`: feat: support responsive fullscreen aspect ratio resizing
 - `2026-11-02T20:45:37+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
+- `2026-11-02T15:03:41+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
