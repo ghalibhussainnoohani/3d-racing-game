@@ -790,3 +790,4 @@ Full release notes and development milestones.
 - `2026-11-02T20:45:37+05:00`: perf: cache WebGL shader programs to eliminate micro-stutters
 - `2026-11-02T15:03:41+05:00`: feat: implement dynamic rival AI pathfinding along racing lines
 - `2026-11-02T18:46:20+05:00`: chore: clean up texture memory on level transitions
+- `2026-11-03T13:24:44+05:00`: chore: clean up texture memory on level transitions
