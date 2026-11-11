@@ -800,3 +800,4 @@ Full release notes and development milestones.
 - `2026-11-09T20:14:19+05:00`: fix: resolve camera clipping on steep banked curves
 - `2026-11-10T22:54:13+05:00`: fix: resolve camera clipping on steep banked curves
 - `2026-11-11T20:47:54+05:00`: feat: add customizable cockpit telemetry overlays
+- `2026-11-11T17:00:39+05:00`: fix: resolve camera clipping on steep banked curves
