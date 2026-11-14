@@ -1,3 +1,4 @@
+let hudLastMouseDown = 0;
 'use strict';
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -165,6 +166,7 @@ function drawHUD()
             }
         }
         enhancedMode && helpOpen && drawHelpCard(); // the HELP card over the menu (help.js)
+        drawHUDText('PILOT: GHALIB HUSSAIN', edge(-.04), .05, .032, WHITE, 'right');
     }
     else if (titleScreenMode)
     {
@@ -174,13 +176,13 @@ function drawHUD()
         {
             // FULL SPECTRUM RACING under the logo, centred like the whole word above it. It
             // waits 1.5 s after the title appears, then fades in over a second
-            const s = titleLogoSize(), titleFade = clamp((performance.now()-titleSubtitleStart)/1e3-1.5, 0, 1);
+            const s = titleLogoSize(), titleFade = clamp((performance.now()-titleSubtitleStart)/500, 0.8, 1);
             drawHUDText('FULL SPECTRUM RACING', .5, titleLogoY + s*.42, s*.3, rgb(1, 1, 1, titleFade));
             // the credit, low on the title, fading in with the subtitle (Frank, 2026-09-22).
             // ENHANCED BUILDS ONLY, this whole branch: the 13k jam entry is being voted on and
             // never changes (its Terser output stays byte-identical, build-full says so)
             // sized off the logo, like the subtitle, so a narrow window shrinks it too
-            drawHUDText('CREATED BY FRANK FORCE FOR JS13K 2026', .5, .94, s*.19, rgb(1, 1, 1, titleFade*.75));
+            drawHUDText('GHALIB HUSSAIN', .5, .94, s*.25, rgb(1, 1, 1, titleFade));
         }
     }
     else
@@ -200,6 +202,7 @@ function drawHUD()
             // A destroyed craft reads OUT instead of a place
             playerVehicle.deadUntil ? drawHUDText('OUT', .5,.55, .36) : drawPlace(lastRacePlace, .55,.55, .36);
             drawHUDText(formatTimeString(raceTime), .5,.65, .06);
+            drawHUDText('GHALIB HUSSAIN', .5,.72, .04, band);
         }
         else
         {
@@ -228,11 +231,214 @@ function drawHUD()
 
                 // time top left; lap and circuit top right (the results card owns the final time)
                 drawHUDText(formatTimeString(raceTime), edge(.035),.075, .045, WHITE, 'left');
+                drawHUDText('PILOT: GHALIB HUSSAIN', edge(.035),.115, .028, band, 'left');
                 drawHUDText('LAP '+(playerLap+1)+'/'+raceLaps, edge(-.035),.075, .045, WHITE, 'right');
                 drawHUDText(levelInfo.name, edge(-.035),.115, .028, band, 'right');
             }
             enhancedMode && drawHelpTips(); // the in-race tips until the first finish (help.js)
         }
+    }
+
+    
+    // Check 'W' or 'P' key for Auto Direction & Full Speed
+    if ((keyWasPressed('KeyW') || keyWasPressed('KeyP')) && (!titleScreenMode || (titleScreenMode && menuMode)))
+    {
+        fireSpeedMode = !fireSpeedMode;
+        if (fireSpeedMode)
+        {
+            sound_boost && sound_boost.play(1, 1.5);
+            sound_checkpoint && sound_checkpoint.play(.7);
+        }
+        else
+        {
+            sound_bump && sound_bump.play(.5, .7);
+        }
+    }
+
+    // Check 'F' key during race
+    if (keyWasPressed('KeyC') && !titleScreenMode) { if (typeof cameraMode === 'undefined') cameraMode = 0; cameraMode = (cameraMode + 1) % 3; sound_checkpoint && sound_checkpoint.play(0.4, 2); }
+    if ((keyWasPressed('KeyJ') || keyIsDown('KeyJ')) && !titleScreenMode)
+    {
+        if (typeof triggerJump === 'function') triggerJump();
+    }
+    if (keyWasPressed('KeyF') && !titleScreenMode)
+    {
+        if (typeof fireAttack === 'function') fireAttack();
+    }
+
+    // Draw 4 Action Buttons: POWER UP, FIRE, JUMP 360 & 3D VIEW
+    if (!titleScreenMode || (titleScreenMode && menuMode))
+    {
+        const ctx = mainContext, W = mainCanvasSize.x, H = mainCanvasSize.y;
+        const bw = Math.min(W * .13, H * .18), bh = H * .062;
+        const gap = H * .012;
+        const totalW = bw * 4 + gap * 3;
+        const bx1 = (W - totalW) / 2, by = H * .025;
+        const bx2 = bx1 + bw + gap;
+        const bx3 = bx2 + bw + gap;
+        const bx4 = bx3 + bw + gap;
+
+        const mx = (mouseX + 1) / 2 * W, my = mouseY * H;
+        const isHover1 = (mx >= bx1 && mx <= bx1 + bw && my >= by && my <= by + bh);
+        const isHover2 = (mx >= bx2 && mx <= bx2 + bw && my >= by && my <= by + bh);
+        const isHover3 = (mx >= bx3 && mx <= bx3 + bw && my >= by && my <= by + bh);
+        const isHover4 = (mx >= bx4 && mx <= bx4 + bw && my >= by && my <= by + bh);
+
+                const isHudClick = ((mouseButtons & 1) && !hudLastMouseDown) || mousePressed;
+        hudLastMouseDown = (mouseButtons & 1);
+
+        // Click Speed Up / Auto Pilot
+        if (isHudClick && isHover1)
+        {
+            fireSpeedMode = !fireSpeedMode;
+            mousePressed = 0;
+            mouseMode = 0;
+            if (fireSpeedMode)
+            {
+                sound_boost && sound_boost.play(1, 1.5);
+                sound_checkpoint && sound_checkpoint.play(.7);
+            }
+            else
+            {
+                sound_bump && sound_bump.play(.5, .7);
+            }
+        }
+
+        // Click Fire
+        if (isHudClick && isHover2)
+        {
+            mousePressed = 0;
+            mouseMode = 0;
+            if (typeof fireAttack === 'function') fireAttack();
+        }
+
+        // Click Jump 360
+        if (isHudClick && isHover3)
+        {
+            mousePressed = 0;
+            mouseMode = 0;
+            if (typeof triggerJump === 'function') triggerJump();
+        }
+
+        // Click 3D View Cycle
+        if (isHudClick && isHover4)
+        {
+            mousePressed = 0;
+            mouseMode = 0;
+            if (typeof cameraMode !== 'undefined')
+            {
+                cameraMode = (cameraMode + 1) % 3;
+                sound_checkpoint && sound_checkpoint.play(0.4, 2);
+            }
+        }
+
+        ctx.save();
+        // 1. Draw Speed Up Button
+        const active1 = (typeof fireSpeedMode !== 'undefined' && fireSpeedMode) || (!titleScreenMode && (keyIsDown('KeyW') || keyIsDown('KeyP')));
+        const bgGrad1 = ctx.createLinearGradient(bx1, by, bx1 + bw, by + bh);
+        if (active1)
+        {
+            const p = 0.5 + 0.5 * Math.sin(time * 9);
+            bgGrad1.addColorStop(0, 'rgba(255, 40, 0, 0.95)');
+            bgGrad1.addColorStop(0.5, 'rgba(255, ' + Math.floor(130 + p * 80) + ', 0, 0.95)');
+            bgGrad1.addColorStop(1, 'rgba(220, 0, 40, 0.95)');
+        }
+        else
+        {
+            bgGrad1.addColorStop(0, isHover1 ? 'rgba(30, 80, 160, 0.85)' : 'rgba(15, 25, 45, 0.8)');
+            bgGrad1.addColorStop(1, isHover1 ? 'rgba(15, 45, 95, 0.85)' : 'rgba(8, 12, 25, 0.8)');
+        }
+
+        ctx.beginPath();
+        if (ctx.roundRect) ctx.roundRect(bx1, by, bw, bh, 8); else ctx.rect(bx1, by, bw, bh);
+        ctx.fillStyle = bgGrad1;
+        ctx.fill();
+        ctx.lineWidth = active1 ? 3 : 2;
+        ctx.strokeStyle = active1 ? '#ffffff' : (isHover1 ? '#00e5ff' : 'rgba(255, 255, 255, 0.45)');
+        ctx.shadowColor = active1 ? 'rgba(255, 80, 0, 0.8)' : (isHover1 ? 'rgba(0, 229, 255, 0.5)' : 'transparent');
+        ctx.shadowBlur = active1 ? 12 : (isHover1 ? 8 : 0);
+        ctx.stroke();
+
+        const btnText1 = active1 ? '🔥 AUTO PILOT' : '⚡ POWER UP';
+        drawHUDText(btnText1, (bx1 + bw / 2) / W, (by + bh * 0.68) / H, 0.024, active1 ? WHITE : (isHover1 ? WHITE : rgb(0.85, 0.92, 1)), 'center');
+
+        // 2. Draw Fire Button
+        const isFiring = (typeof lastFireTime !== 'undefined' && time - lastFireTime < 0.22);
+        const bgGrad2 = ctx.createLinearGradient(bx2, by, bx2 + bw, by + bh);
+        if (isFiring)
+        {
+            bgGrad2.addColorStop(0, 'rgba(255, 220, 50, 0.98)');
+            bgGrad2.addColorStop(0.5, 'rgba(255, 80, 0, 0.98)');
+            bgGrad2.addColorStop(1, 'rgba(200, 0, 0, 0.98)');
+        }
+        else
+        {
+            bgGrad2.addColorStop(0, isHover2 ? 'rgba(180, 60, 0, 0.88)' : 'rgba(60, 20, 10, 0.8)');
+            bgGrad2.addColorStop(1, isHover2 ? 'rgba(110, 20, 0, 0.88)' : 'rgba(30, 10, 5, 0.8)');
+        }
+
+        ctx.beginPath();
+        if (ctx.roundRect) ctx.roundRect(bx2, by, bw, bh, 8); else ctx.rect(bx2, by, bw, bh);
+        ctx.fillStyle = bgGrad2;
+        ctx.fill();
+        ctx.lineWidth = isFiring ? 3 : 2;
+        ctx.strokeStyle = isFiring ? '#ffffff' : (isHover2 ? '#ffb700' : 'rgba(255, 120, 50, 0.6)');
+        ctx.shadowColor = isFiring ? 'rgba(255, 180, 0, 0.9)' : (isHover2 ? 'rgba(255, 100, 0, 0.6)' : 'transparent');
+        ctx.shadowBlur = isFiring ? 16 : (isHover2 ? 10 : 0);
+        ctx.stroke();
+
+        const btnText2 = isFiring ? '💥 FIRING!' : '🔥 FIRE';
+        drawHUDText(btnText2, (bx2 + bw / 2) / W, (by + bh * 0.68) / H, 0.024, isFiring ? WHITE : (isHover2 ? WHITE : rgb(1, 0.88, 0.7)), 'center');
+
+        // 3. Draw Jump 360 Button
+        const isJumping = (playerVehicle && playerVehicle.jumpEndTime && time < playerVehicle.jumpEndTime);
+        const bgGrad3 = ctx.createLinearGradient(bx3, by, bx3 + bw, by + bh);
+        if (isJumping)
+        {
+            const jp = 0.5 + 0.5 * Math.sin(time * 14);
+            bgGrad3.addColorStop(0, 'rgba(0, 240, 255, 0.98)');
+            bgGrad3.addColorStop(0.5, 'rgba(255, 220, 0, 0.98)');
+            bgGrad3.addColorStop(1, 'rgba(0, 180, 255, 0.98)');
+        }
+        else
+        {
+            bgGrad3.addColorStop(0, isHover3 ? 'rgba(0, 140, 200, 0.88)' : 'rgba(0, 45, 90, 0.8)');
+            bgGrad3.addColorStop(1, isHover3 ? 'rgba(0, 80, 140, 0.88)' : 'rgba(0, 25, 50, 0.8)');
+        }
+
+        ctx.beginPath();
+        if (ctx.roundRect) ctx.roundRect(bx3, by, bw, bh, 8); else ctx.rect(bx3, by, bw, bh);
+        ctx.fillStyle = bgGrad3;
+        ctx.fill();
+        ctx.lineWidth = isJumping ? 3 : 2;
+        ctx.strokeStyle = isJumping ? '#ffffff' : (isHover3 ? '#00ffff' : 'rgba(0, 229, 255, 0.6)');
+        ctx.shadowColor = isJumping ? 'rgba(0, 240, 255, 0.95)' : (isHover3 ? 'rgba(0, 229, 255, 0.6)' : 'transparent');
+        ctx.shadowBlur = isJumping ? 16 : (isHover3 ? 10 : 0);
+        ctx.stroke();
+
+        const btnText3 = isJumping ? '🌀 360 ROLL!' : '🚀 JUMP 360';
+        drawHUDText(btnText3, (bx3 + bw / 2) / W, (by + bh * 0.68) / H, 0.024, isJumping ? rgb(0.1, 0.1, 0.2) : (isHover3 ? WHITE : rgb(0.8, 0.95, 1)), 'center');
+
+        // 4. Draw 3D View Button
+        const cMode = typeof cameraMode !== 'undefined' ? cameraMode : 0;
+        const viewNames = ['🎥 3D HERO', '🎥 CHASE', '🎥 COCKPIT'];
+        const bgGrad4 = ctx.createLinearGradient(bx4, by, bx4 + bw, by + bh);
+        bgGrad4.addColorStop(0, isHover4 ? 'rgba(90, 40, 160, 0.88)' : 'rgba(40, 15, 75, 0.8)');
+        bgGrad4.addColorStop(1, isHover4 ? 'rgba(50, 20, 100, 0.88)' : 'rgba(20, 8, 45, 0.8)');
+
+        ctx.beginPath();
+        if (ctx.roundRect) ctx.roundRect(bx4, by, bw, bh, 8); else ctx.rect(bx4, by, bw, bh);
+        ctx.fillStyle = bgGrad4;
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = isHover4 ? '#e040fb' : 'rgba(224, 64, 251, 0.55)';
+        ctx.shadowColor = isHover4 ? 'rgba(224, 64, 251, 0.6)' : 'transparent';
+        ctx.shadowBlur = isHover4 ? 10 : 0;
+        ctx.stroke();
+
+        drawHUDText(viewNames[cMode], (bx4 + bw / 2) / W, (by + bh * 0.68) / H, 0.024, isHover4 ? WHITE : rgb(0.95, 0.85, 1), 'center');
+
+        ctx.restore();
     }
 
     if (debugInfo && !titleScreenMode) // dev readout: speed/60 = world units per frame
@@ -261,6 +467,7 @@ function drawTouchHUD(band)
     ctx.fillRect(bx+e-2, by-3, 4, bh+6);
 
     drawHUDText(formatTimeString(raceTime), edge(.035*k), .135*k, .045, WHITE, 'left');
+    drawHUDText('PILOT: GHALIB HUSSAIN', edge(.035*k), .175*k, .028, band, 'left');
     drawHUDText('LAP '+(playerLap+1)+'/'+raceLaps, edge(-.035*k), .075*k, .045, WHITE, 'right');
     drawHUDText(levelInfo.name, edge(-.035*k), .115*k, .028, band, 'right');
 }
@@ -354,14 +561,14 @@ function drawLogo(x, y, s)
     // text only sets the font). The 13k build and the wide menu's corner logo stay centred
     // on 13K
     if (enhancedMode && (!menuMode || getAspect() < 1))
-        drawHUDText('', 0, 0, s), x -= (ctx.measureText('TRA').width - ctx.measureText('SP').width)/2/W;
+        {}
     const g = ctx.createLinearGradient(x*W-px, 0, x*W+px, 0);
     for(let i=9; i--;)
         g.addColorStop(i/8, hsl(i/8-time*.3, 1, .6));
-    drawHUDText('13K', x,y + Math.sin(time)*s*.05, s/.9, g);
-    const w = ctx.measureText('13K').width/2/W; // the font is still set from that call
-    drawHUDText('SP', x-w,y, s, WHITE, 'right');
-    drawHUDText('TRA', x+w,y, s, WHITE, 'left');
+    drawHUDText('MEER HAZAR KHAN', x, y + Math.sin(time)*s*.05, s * .5, g);
+
+
+
 }
 
 // the enhanced title's subtitle fade: performance.now() when the main title appeared, 0 while

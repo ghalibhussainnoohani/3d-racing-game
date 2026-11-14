@@ -365,7 +365,8 @@ function drawTrails()
 
             // the white craft (index 7) rides the rainbow, moving along the ribbon and with time;
             // everyone else is their own colour, lifted 10% at the head
-            const color=v.racerIndex==7?hsl(j/8+time/3,1,.65):v.glowColor.lerp(WHITE,fade*.1);
+            const isFire=(v===playerVehicle&&typeof fireSpeedMode!=="undefined"&&fireSpeedMode);
+            const color=isFire?hsl((j*0.06+time*3)%0.15,1,0.6):(v.racerIndex==7?hsl(j/8+time/3,1,.65):v.glowColor.lerp(WHITE,fade*.1));
             color.a=fade;
 
             // half width: 2.5 times under boost, half off the gas, a quarter on the brake (throttle -.5)
@@ -379,12 +380,33 @@ function drawTrails()
         // under boost and never off: a third of the size at rest (the engines are lit on the
         // grid), .15 of it on the brake
         const idle=max(.15,.35+.65*v.throttle);
+        const isFireNozzle=(v===playerVehicle&&typeof fireSpeedMode!=="undefined"&&fireSpeedMode);
         for(const p of v.nozzles)
         {
-            pushGlow(p,300*idle+400*boost,v.glowColor);
-            pushGlow(p,100*idle+150*boost,WHITE,0);
+            if(isFireNozzle) {
+                pushGlow(p, 650+150*Math.sin(time*25), rgb(1, 0.35, 0.05));
+                pushGlow(p, 320+80*Math.cos(time*25), rgb(1, 0.85, 0.1));
+                pushGlow(p, 140, WHITE);
+            } else {
+                pushGlow(p,300*idle+400*boost,v.glowColor);
+                pushGlow(p,100*idle+150*boost,WHITE,0);
+            }
         }
     }
+
+        if (typeof fireProjectiles !== 'undefined')
+        {
+            for (const p of fireProjectiles)
+            {
+                const f = clamp(p.life / p.maxLife, 0, 1);
+                const col = p.color || rgb(1, 0.35, 0.05);
+                pushGlow(p.pos, p.size * (0.85 + 0.35 * Math.sin(time * 30)), rgb(col.r, col.g, col.b, f));
+                pushGlow(p.pos, p.size * 0.52, rgb(1, 0.85, 0.15, f));
+                pushGlow(p.pos, p.size * 0.22, WHITE);
+                for (let k = 1; k <= 3; ++k)
+                    pushGlow(p.pos.subtract(p.velocity.scale(0.007 * k)), p.size * 0.35 / k, rgb(1, 0.2, 0, f * 0.8));
+            }
+        }
     glEnableFog=1; // back on for the next frame's hulls and canopy, which are not stored meshes
     glRender();
 }

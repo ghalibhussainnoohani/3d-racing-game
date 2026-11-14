@@ -43,19 +43,19 @@ let levelInfoList;
 // bank, rival skill, pad spacing, strip width, lane count and the finale's rainbow climb
 // the ladder by formula of the circuit index (LevelInfo)
 const circuitTable = [
-    ['REDSHIFT',    0,   .9, 1200, 300, 1, 1.2, 5, 0],
-    ['FILAMENT',    .06, .9, 2500, 500, 2, .8, 35, 2],
-    ['SODIUM',      .13, .9,  800, 600, 0, 1.4, 21, 0],
+    ['MEER HAZAR KHAN',    0,   .9, 1200, 300, 1, 1.2, 5, 0],
+    ['MUSHARAF ALI',    .06, .9, 2500, 500, 2, .8, 35, 2],
+    ['RAHMAN',      .13, .9,  800, 600, 0, 1.4, 21, 0],
     // a canyon: the road 24,000 over the ground, the towers on plinths
-    ['AURORA',      .35, .8, 24000, 700, 3, 1, 2, 36],
+    ['NAWAZ',      .35, .8, 24000, 700, 3, 1, 2, 36],
     // a dense infield of floating slabs
-    ['CHERENKOV',   .6,  .9, 1500, 500, 4, .9, 2, 138],
+    ['RIZWAN',   .6,  .9, 1500, 500, 4, .9, 2, 138],
     // the figure eight
-    ['ULTRAVIOLET', .78, .9, 2000, 250, 5, 1.5, 4, 8],
+    ['MEER', .78, .9, 2000, 250, 5, 1.5, 4, 8],
     // monoliths, grey with a red tinge in the sky (ominous), a canyon like AURORA with
     // taller towers, colossal giants and clouds
-    ['UMBRA',       .98, .12, 24000, 800, 7, .6, 14, 110],
-    ['SP13KTRA',    0,   1, 2200, 250, 1, 1.3, 7, 8],
+    ['HAMZA',       .98, .12, 24000, 800, 7, .6, 14, 110],
+    ['MEER HAZAR KHAN',    0,   1, 2200, 250, 1, 1.3, 7, 8],
 ];
 
 ////////////////////////////////////////////////////////////////////////////////

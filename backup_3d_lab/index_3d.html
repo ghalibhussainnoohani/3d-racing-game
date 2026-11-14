@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive 3D Computer Science Lab | Three.js</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- WebGL Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <h1 class="loader-title">DEPARTMENT OF COMPUTER SCIENCE</h1>
+      <p class="loader-subtitle">Advanced 3D Computer Lab • Loading Environment & Character...</p>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+      <div id="loading-status">Generating student workstations & server rack...</div>
+    </div>
+  </div>
+
+  <!-- Start / Lock Screen Overlay -->
+  <div id="blocker">
+    <div id="instructions">
+      <div class="instruction-badge">VIRTUAL CAMPUS LAB</div>
+      <h1 class="instruction-title">3D COMPUTER LABORATORY</h1>
+      <p class="instruction-desc">Explore a fully procedural computer lab with 24 student workstations, live coding monitors, server rack, teacher smart board, and customizable avatar.</p>
+      
+      <div class="controls-grid">
+        <div class="control-card"><span class="key">W A S D</span> Walk / Move</div>
+        <div class="control-card"><span class="key">SHIFT</span> Sprint Run</div>
+        <div class="control-card"><span class="key">SPACE</span> Jump</div>
+        <div class="control-card"><span class="key">E</span> Sit on Chair / Stand</div>
+        <div class="control-card"><span class="key">V</span> Camera Mode (3rd / 1st / Orbit)</div>
+        <div class="control-card"><span class="key">C</span> Customize Avatar</div>
+        <div class="control-card"><span class="key">T</span> Day / Night Lighting</div>
+        <div class="control-card"><span class="key">SCROLL</span> Zoom Camera</div>
+        <div class="control-card"><span class="key">H</span> Controls Help</div>
+        <div class="control-card"><span class="key">ESC</span> Release Mouse</div>
+      </div>
+
+      <button id="start-btn" class="glow-button">ENTER COMPUTER LAB</button>
+      <div class="hint-text">100% Procedural Three.js primitives • Instanced rendering • Offline PBR</div>
+    </div>
+  </div>
+
+  <!-- In-Game HUD -->
+  <div id="hud">
+    <!-- Crosshair (active in 1st person) -->
+    <div id="crosshair">
+      <div class="crosshair-dot"></div>
+      <div class="crosshair-ring"></div>
+    </div>
+
+    <!-- Interaction Tooltip -->
+    <div id="interaction-tooltip">
+      <span class="tooltip-icon">⚡</span>
+      <span id="tooltip-text">Inspect Workstation</span>
+      <span class="tooltip-action">[E / CLICK]</span>
+    </div>
+
+    <!-- Zone Banner -->
+    <div id="zone-banner">
+      <span class="zone-icon">📍</span>
+      <span id="zone-name">Student Workstation Area</span>
+    </div>
+
+    <!-- Status & Info HUD Top Right -->
+    <div id="top-bar">
+      <div class="hud-pill" id="btn-mode" title="Cycle Camera Mode (V)">
+        <span class="pill-icon">🎥</span> <span id="mode-text">Third-Person (V)</span>
+      </div>
+      <div class="hud-pill" id="btn-custom" title="Customize Character (C)">
+        <span class="pill-icon">🎨</span> <span>Customize (C)</span>
+      </div>
+      <div class="hud-pill" id="btn-lighting" title="Toggle Day/Night Lighting (T)">
+        <span class="pill-icon">☀️</span> <span id="light-text">Day Mode (T)</span>
+      </div>
+      <div class="hud-pill" id="btn-audio" title="Toggle Audio FX">
+        <span class="pill-icon">🔊</span> <span id="audio-text">Audio ON</span>
+      </div>
+      <div class="hud-pill" id="btn-help" title="Controls Help (H)">
+        <span class="pill-icon">❓</span> <span>Help (H)</span>
+      </div>
+    </div>
+
+    <!-- Quick Stats Bottom Left -->
+    <div id="stats-panel">
+      <div class="stat-row">
+        <span class="stat-label">SYSTEM</span>
+        <span class="stat-val status-active">ONLINE • GIGABIT LAN</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">WORKSTATIONS</span>
+        <span class="stat-val">24 ACTIVE NODES</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">ENVIRONMENT</span>
+        <span class="stat-val" id="temp-val">22.0 °C • HVAC OK</span>
+      </div>
+    </div>
+
+    <!-- Minimap Bottom Right -->
+    <div id="minimap-container">
+      <div class="minimap-header">COMPUTER LAB MAP</div>
+      <canvas id="minimap" width="180" height="130"></canvas>
+      <div class="minimap-coords" id="coords-text">X: 0.0m | Z: 0.0m</div>
+    </div>
+
+    <!-- Help Modal Overlay -->
+    <div id="help-modal" class="hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>COMPUTER LAB GUIDE & CONTROLS</h2>
+          <button id="close-help-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="guide-section">
+            <h3>🎮 Navigation & Character</h3>
+            <ul>
+              <li><strong>W, A, S, D</strong> : Walk forward, left, backward, right</li>
+              <li><strong>Left Shift</strong> : Sprint / run with dynamic body tilt</li>
+              <li><strong>Space</strong> : Jump into the air</li>
+              <li><strong>E</strong> : Sit down on any student or teacher chair (triggers typing animation!) or stand up</li>
+              <li><strong>Mouse</strong> : Look and rotate camera</li>
+              <li><strong>Mouse Wheel</strong> : Zoom in / out in Third-Person mode</li>
+              <li><strong>V</strong> : Cycle camera modes: Third-Person Follow ➜ First-Person ➜ Free Orbit</li>
+              <li><strong>C</strong> : Open live Character Customization Panel</li>
+              <li><strong>ESC</strong> : Unlock mouse cursor</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h3>🖥️ Interactive Equipment</h3>
+            <ul>
+              <li><strong>Chairs</strong>: Walk near any chair and press <strong>E</strong> to sit and type!</li>
+              <li><strong>Teacher Smart Board</strong>: Click the screen to cycle lecture presentation slides</li>
+              <li><strong>Window Blinds</strong>: Click window frames or blinds to raise/lower Venetian blinds</li>
+              <li><strong>Server Rack</strong>: Click to inspect network cluster and switch activity</li>
+              <li><strong>3D Printer & Scanner</strong>: Click to inspect print and scanning queues</li>
+            </ul>
+          </div>
+          <div class="guide-section">
+            <h3>💡 Environment Controls</h3>
+            <ul>
+              <li><strong>T</strong> : Switch between daytime natural sunlight & night lab mode</li>
+              <li><strong>H</strong> : Toggle this help reference guide</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -61,6 +61,9 @@ let time, frame, frameTimeLastMS, frameTimeBufferMS, paused, focusPaused;
 let startCountdown, gameOverTime;
 let raceTime, playerWin;
 let titleScreenMode = 1, menuMode = 0; // menuMode: the title's menu (circuit and craft select, hud.js)
+let fireSpeedMode = 0; // Fire Speed & AutoMode toggle
+let fireProjectiles = [], lastFireTime = 0;
+let cameraMode = 0;
 let trackSeed = 1331; // the world's random seed: every circuit is preset
 
 ///////////////////////////////
@@ -78,7 +81,7 @@ function gameInit()
 {
     if (enhancedMode)
     {
-        console.log(`SP13KTRA by Frank Force`);
+        console.log(`MEER HAZAR KHAN by Ghalib Hussain`);
         console.log(`www.frankforce.com 🦄🌈`);
     }
 
@@ -296,6 +299,7 @@ function gameUpdateInternal()
         }
     }
     updateCars(); // player, rivals, contacts, laps and the finish (vehicle.js); runs on the title too
+    updateFireProjectiles(timeDelta);
 }
 
 ///////////////////////////////
@@ -439,8 +443,17 @@ function enhancedModeUpdate()
     // F toggles fullscreen from anywhere, the title, the menu and a race alike (the menu's
     // FULL SCREEN row is the same toggle for a mouse or a thumb). In dev mode F is the free
     // camera, so the dev page keeps that until dev() is off
+    if ((keyWasPressed('KeyJ') || keyIsDown('KeyJ')) && typeof triggerJump === 'function')
+    {
+        triggerJump();
+    }
     if (keyWasPressed('KeyF') && !(debug && devMode))
-        toggleFullscreen();
+    {
+        if (!titleScreenMode)
+            fireAttack();
+        else
+            toggleFullscreen();
+    }
 
     if (keyWasPressed('KeyR') && !titleScreenMode) // restart
     {
@@ -477,48 +490,66 @@ function updateCraftCameras()
 
 function updateCamera()
 {
-    const v=playerVehicle;
-    const boost=v.boostTime>time;
-    boostFov=lerp(.1,boostFov,boost); // the lens widens on a boost (glPreRender)
+    const v = playerVehicle;
+    const boost = v.boostTime > time;
+    const isAutoW = (!titleScreenMode && (keyIsDown('KeyW') || (typeof fireSpeedMode !== 'undefined' && fireSpeedMode)));
+    const speedRatio = clamp(v.speed / 50000, 0, 1);
 
-    // the camera follows the travel direction with a 30% lean toward the nose, so a
-    // sideways slip shows the craft swung across the screen rather than the world spinning
-    // (below 1000 units/s the velocity direction is noise: use the heading)
-    const travel=v.speed>1000?Math.atan2(v.velocity.x,v.velocity.z):v.heading;
-    cameraRot.y+=clampAngle(travel+clampAngle(v.heading-travel)*.3-cameraRot.y)*.2; // yaw ease per step
-    // the camera's own forward on the ground plane; the target is a boom length back along
-    // it and 900 units up
-    const f=vec3(Math.sin(cameraRot.y),0,Math.cos(cameraRot.y));
-    const target=v.pos.subtract(f.scale(cameraBoomZ)).addSelf(vec3(0,900));
+    boostFov = lerp(.08, boostFov, isAutoW ? 1.0 : (boost ? 0.8 : speedRatio * 0.35));
 
-    // keep the boom above the nearby road without a general scenery collider: project the
-    // target onto the route (hinted a boom length behind the player), clamp it 500 units
-    // inside the walls and never let it sink under the road plus 650
-    const r=projectRoute(target,v.s-cameraBoomZ/routeScale), info=r.info;
-    const x=r.x, surface=info.point(x,650);
-    target.addSelf(info.right.scale(x-r.x));
-    target.y=max(target.y,surface.y);
+    // Perfect Camera Views
+    // 0: Epic 3D Hero View - optimal height and distance to frame the 3D aeroplane in all its beauty!
+    // 1: Action Dynamic Chase - high-speed wider view
+    // 2: Low-Slung 3D Cockpit Chase - intense close view
+    let boomDist = 1060 + speedRatio * 180;
+    let boomHeight = 440;
+    let pitchOffset = 0.11;
 
-    cameraPos=cameraPos.lerp(target,.5); // position ease
-    // look down .26 rad plus half the road's pitch (positive pitch = descending, track.js)
-    cameraRot.x=lerp(.12,cameraRot.x,.26+info.pitch*.5);
-    // roll with a third of the road's bank, in degrees (19 of 57.3). Never cameraRot.z:
-    // buildMatrix turns that about world Z after the yaw (right facing +Z, the wrong way
-    // facing -Z, a nod facing +-X); glPreRender rolls the view matrix in camera space
-    cameraRoll=lerp(.08,cameraRoll,-Math.atan(info.roll)*19);
-
-    if(freeCamMode)
+    const activeCamMode = typeof cameraMode !== "undefined" ? cameraMode : 0;
+    if (activeCamMode === 1)
     {
-        cameraPos=freeCamPos.copy();
-        cameraRot=freeCamRot.copy();
-        cameraRoll=0; // the free camera does not lean with the player's bank
+        boomDist = 1320 + speedRatio * 280;
+        boomHeight = 600;
+        pitchOffset = 0.16;
     }
-    // the dev map view (debug.js): 500k straight up over the loop's centre plus the pan;
-    // glPreRender goes orthographic
-    if(topDownMode)
+    else if (activeCamMode === 2)
     {
-        cameraPos=trackMapCenter.add(topDownPan).addSelf(vec3(0,5e5,0));
-        cameraRot=vec3(PI/2,0,0); cameraRoll=topDownRotate?90:0; // pitch only: vec3(s) is (s,s,s); X turns the view a quarter
+        boomDist = 820 + speedRatio * 120;
+        boomHeight = 350;
+        pitchOffset = 0.07;
+    }
+
+    const travel = v.speed > 1000 ? Math.atan2(v.velocity.x, v.velocity.z) : v.heading;
+    cameraRot.y += clampAngle(travel + clampAngle(v.heading - travel) * .35 - cameraRot.y) * .22;
+
+    const f = vec3(Math.sin(cameraRot.y), 0, Math.cos(cameraRot.y));
+    let jumpCamLift = 0;
+    if (v && v.jumpEndTime && time < v.jumpEndTime)
+    {
+        const jp = clamp((time - v.jumpStartTime) / (v.jumpEndTime - v.jumpStartTime), 0, 1);
+        jumpCamLift = Math.sin(jp * PI) * 280;
+    }
+    const target = v.pos.subtract(f.scale(boomDist)).addSelf(vec3(0, boomHeight + jumpCamLift));
+
+    const r = projectRoute(target, v.s - boomDist / routeScale), info = r.info;
+    const x = r.x, surface = info.point(x, boomHeight * 0.7);
+    target.addSelf(info.right.scale(x - r.x));
+    target.y = max(target.y, surface.y);
+
+    cameraPos = cameraPos.lerp(target, .5);
+    cameraRot.x = lerp(.14, cameraRot.x, pitchOffset + info.pitch * .45);
+    cameraRoll = lerp(.1, cameraRoll, -Math.atan(info.roll) * 22);
+
+    if (freeCamMode)
+    {
+        cameraPos = freeCamPos.copy();
+        cameraRot = freeCamRot.copy();
+        cameraRoll = 0;
+    }
+    if (topDownMode)
+    {
+        cameraPos = trackMapCenter.add(topDownPan).addSelf(vec3(0, 5e5, 0));
+        cameraRot = vec3(PI / 2, 0, 0); cameraRoll = topDownRotate ? 90 : 0;
     }
 }
 
@@ -557,4 +588,96 @@ function writeSaveData()
         try { localStorage[saveName] = [currentCircuit, lastRacePlace, playerCraft, bestPlaces, ...bestTimes]; } catch(e) {}
     else
         localStorage[saveName] = [currentCircuit, lastRacePlace, playerCraft, bestPlaces, ...bestTimes];
+}
+
+
+function fireAttack(shooter = playerVehicle)
+{
+    if (titleScreenMode || !shooter || shooter.deadUntil) return;
+
+    if (shooter === playerVehicle)
+    {
+        if (time - lastFireTime < 0.16) return;
+        lastFireTime = time;
+        sound_boost && sound_boost.play(0.9, 2.5);
+        sound_bump && sound_bump.play(0.8, 1.5);
+    }
+    else
+    {
+        // For rivals: play audio if player is within range
+        if (playerVehicle && shooter.pos.subtract(playerVehicle.pos).mag() < 12000)
+            sound_bump && sound_bump.play(0.45, 1.8);
+    }
+
+    shooter.muzzleFlash = time + 0.18;
+
+    const m = shooter.craftMatrix();
+    const H = shooter.craft.w, bs = shooter.craft.bs;
+
+    // Cannon muzzle positions
+    const leftMuzzle = vec3(-H * .48, 40 - bs.y * .04, bs.z * .54).transform(m);
+    const rightMuzzle = vec3(H * .48, 40 - bs.y * .04, bs.z * .54).transform(m);
+    const forwardVel = shooter.forward.scale(55000).add(shooter.velocity);
+    const isPlayer = (shooter === playerVehicle);
+
+    fireProjectiles.push({
+        owner: shooter,
+        pos: leftMuzzle,
+        velocity: forwardVel.add(shooter.up.cross(shooter.forward).scale(-350)),
+        life: 1.2,
+        maxLife: 1.2,
+        size: isPlayer ? 420 : 360,
+        color: isPlayer ? rgb(1, 0.4, 0.05) : (shooter.glowColor || rgb(1, 0.25, 0.1))
+    });
+    fireProjectiles.push({
+        owner: shooter,
+        pos: rightMuzzle,
+        velocity: forwardVel.add(shooter.up.cross(shooter.forward).scale(350)),
+        life: 1.2,
+        maxLife: 1.2,
+        size: isPlayer ? 420 : 360,
+        color: isPlayer ? rgb(1, 0.4, 0.05) : (shooter.glowColor || rgb(1, 0.25, 0.1))
+    });
+}
+
+function updateFireProjectiles(dt)
+{
+    for (let i = fireProjectiles.length - 1; i >= 0; --i)
+    {
+        const p = fireProjectiles[i];
+        p.pos.addSelf(p.velocity.scale(dt));
+        p.life -= dt;
+
+        if (typeof vehicles !== 'undefined')
+        {
+            for (const v of vehicles)
+            {
+                if (v === p.owner || v.deadUntil) continue;
+                if (p.pos.subtract(v.pos).mag() < 700)
+                {
+                    // DIRECT HIT! Speed drops to 0!
+                    v.speed = 0;
+                    v.velocity = vec3(0, 0, 0);
+                    v.stunTime = time + 0.8;
+                    v.hitTime = time + 0.8;
+
+                    if (v === playerVehicle)
+                    {
+                        sound_hit && sound_hit.play(1, 0.7);
+                        sound_lose && sound_lose.play(0.6, 2.0);
+                    }
+                    else
+                    {
+                        sound_hit && sound_hit.play(0.9, 1.2);
+                    }
+
+                    p.life = 0; // explode projectile
+                    break;
+                }
+            }
+        }
+
+        if (p.life <= 0)
+            fireProjectiles.splice(i, 1);
+    }
 }

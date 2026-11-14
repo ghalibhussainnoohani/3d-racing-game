@@ -160,7 +160,22 @@ class Vehicle
         const yaw=this.heading, f=vec3(Math.sin(yaw),0,Math.cos(yaw));
         const forward=f.subtract(this.up.scale(f.dot(this.up))).normalize();
         const right=this.up.cross(forward).normalize();
-        return routeFrame(this.pos,right,this.up,forward).multiply(buildMatrix(0,vec3(0,0,-this.playerTurn*.14)));
+
+        let jumpH = 0, sPitch = 0, sRoll = 0, sYaw = 0;
+        if (this.jumpEndTime && time < this.jumpEndTime)
+        {
+            const p = clamp((time - this.jumpStartTime) / (this.jumpEndTime - this.jumpStartTime), 0, 1);
+            // Parabolic flying jump altitude: smooth flight arc peaking at 750 units high
+            jumpH = Math.sin(p * PI) * 750;
+            // Full 360-degree acrobatic barrel roll rotation
+            sRoll = p * PI * 2;
+            // Dynamic pitch: pitch up on ascent, level at apex, pitch down on descent
+            sPitch = Math.cos(p * PI) * 0.28;
+            sYaw = Math.sin(p * PI * 2) * 0.1;
+        }
+
+        const pos = this.pos.add(this.up.scale(jumpH));
+        return routeFrame(pos, right, this.up, forward).multiply(buildMatrix(0, vec3(sPitch, sYaw, -this.playerTurn * .14 + sRoll)));
     }
 
     // push the nozzle point and the ribbon's right vector onto the trail (newest first);
@@ -178,23 +193,141 @@ class Vehicle
         if(this.deadUntil) return; // exploded: nothing to draw until the respawn clears it
         const m=this.craftMatrix(), S=this.craft, H=S.w, bs=S.bs;
 
-        // the hull, lit and glossy (the GL flags are as drawTrack left them: depth on, lit).
-        // There is no craft shadow
-        glSpecularity=.75;
+        // the hull, lit and glossy
+        glSpecularity=.95;
         S.mesh.render(m,this.color);
 
-        // the canopy: a half-emissive diamond over the 62% station, .6 toward white (any
-        // darker and a dark craft merges into the dark road from behind)
-        glEmissive=.5;
+        // the canopy: a sleek aerodynamic diamond
+        glEmissive=.55;
         canopyMesh.render(
             m.multiply(buildMatrix(vec3(0,40+bs.y*.5,-bs.z*.22),vec3(-.1,0),vec3(H*.28,bs.y*.55,bs.z*.26))),
             this.color.lerp(WHITE,.6));
 
-        // the engines: 1-3 nozzle points spread across the trailing edge, for the glow pass
-        // (track.js drawTrails); there is no flame bar, the nozzle glow is the engine
+        // the engines: 1-3 nozzle points spread across the trailing edge
         const spread=S.t*.62/max(1,S.engines-1);
         for(let e=0;e<S.engines;++e)
             this.nozzles.push(vec3((2*e-S.engines+1)*spread,S.tail.y,S.tail.z).transform(m));
+
+        // Fully Beautiful 3D Upgrades for Player Aeroplane
+        if (this === playerVehicle)
+        {
+            // 1. Double-Layer High-Tech Glass Cockpit HUD & Interior Pilot Glow
+            glEmissive = 0.85;
+            glSpecularity = 1.0;
+            canopyMesh.render(
+                m.multiply(buildMatrix(vec3(0, 40+bs.y*.54, -bs.z*.20), vec3(-.1, 0), vec3(H*.22, bs.y*.42, bs.z*.22))),
+                WHITE.lerp(this.color, 0.35));
+
+            // 2. Twin Angular Vertical Stabilizers (F-22 style stealth tail fins)
+            glEmissive = 0.2;
+            glSpecularity = 0.95;
+            // Left fin
+            prismMesh.render(
+                m.multiply(buildMatrix(vec3(-H*.36, 40+bs.y*.38, -bs.z*.62), vec3(-.12, 0, -.28), vec3(H*.08, bs.y*.75, bs.z*.28))),
+                this.color);
+            // Left fin glowing neon edge
+            glEmissive = 0.95;
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(-H*.44, 40+bs.y*.82, -bs.z*.66), vec3(-.12, 0, -.28), vec3(H*.02, bs.y*.12, bs.z*.26))),
+                hsl(time*2, 1, 0.65));
+
+            // Right fin
+            glEmissive = 0.2;
+            prismMesh.render(
+                m.multiply(buildMatrix(vec3(H*.36, 40+bs.y*.38, -bs.z*.62), vec3(-.12, 0, .28), vec3(H*.08, bs.y*.75, bs.z*.28))),
+                this.color);
+            // Right fin glowing neon edge
+            glEmissive = 0.95;
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(H*.44, 40+bs.y*.82, -bs.z*.66), vec3(-.12, 0, .28), vec3(H*.02, bs.y*.12, bs.z*.26))),
+                hsl(time*2, 1, 0.65));
+
+            // 3. Central Dorsal Aero Spine down the fuselage
+            glEmissive = 0.35;
+            prismMesh.render(
+                m.multiply(buildMatrix(vec3(0, 40+bs.y*.56, -bs.z*.46), vec3(-.08, 0, 0), vec3(H*.12, bs.y*.35, bs.z*.32))),
+                this.color.lerp(BLACK, 0.25));
+
+            // 4. Heavy Dual Jet Afterburner Nacelles (Rear Fuselage)
+            glEmissive = 0.2;
+            glSpecularity = 1.0;
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(-H*.28, 40+bs.y*.18, -bs.z*.68), vec3(0, 0, 0), vec3(H*.15, bs.y*.32, bs.z*.35))),
+                this.color.lerp(BLACK, 0.3));
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(H*.28, 40+bs.y*.18, -bs.z*.68), vec3(0, 0, 0), vec3(H*.15, bs.y*.32, bs.z*.35))),
+                this.color.lerp(BLACK, 0.3));
+
+            // Glowing turbine afterburner chambers
+            glEmissive = 0.98;
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(-H*.28, 40+bs.y*.18, -bs.z*.96), vec3(0, 0, 0), vec3(H*.12, bs.y*.26, bs.z*.06))),
+                rgb(1, 0.45, 0.08));
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(H*.28, 40+bs.y*.18, -bs.z*.96), vec3(0, 0, 0), vec3(H*.12, bs.y*.26, bs.z*.06))),
+                rgb(1, 0.45, 0.08));
+
+            // Register dual turbine nozzles for quad-engine exhaust
+            this.nozzles.push(vec3(-H*.28, 40+bs.y*.18, -bs.z*.96).transform(m));
+            this.nozzles.push(vec3(H*.28, 40+bs.y*.18, -bs.z*.96).transform(m));
+
+            // 5. Forward Delta Canards (Swept control winglets)
+            glEmissive = 0.25;
+            prismMesh.render(
+                m.multiply(buildMatrix(vec3(-H*.36, 40+bs.y*.20, bs.z*.14), vec3(0, -.18, -.08), vec3(H*.22, bs.y*.07, bs.z*.16))),
+                this.color);
+            prismMesh.render(
+                m.multiply(buildMatrix(vec3(H*.36, 40+bs.y*.20, bs.z*.14), vec3(0, .18, .08), vec3(H*.22, bs.y*.07, bs.z*.16))),
+                this.color);
+
+            // 6. Wingtip Plasma Blades / Endplate Stabilizers
+            glEmissive = 0.92;
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(-H*.98, 40+bs.y*.26, -bs.z*.2), vec3(-.1, 0, .16), vec3(H*.03, bs.y*.44, bs.z*.28))),
+                hsl(time*2.5, 1, 0.65));
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(H*.98, 40+bs.y*.26, -bs.z*.2), vec3(-.1, 0, -.16), vec3(H*.03, bs.y*.44, bs.z*.28))),
+                hsl(time*2.5, 1, 0.65));
+
+            // 7. Twin Heavy Plasma Fire Cannons (Underwing)
+            glEmissive = 0.3;
+            glSpecularity = 1.0;
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(-H*.48, 40-bs.y*.04, bs.z*.16), vec3(0, 0, 0), vec3(H*.05, bs.y*.09, bs.z*.36))),
+                BLACK.lerp(WHITE, 0.28));
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(H*.48, 40-bs.y*.04, bs.z*.16), vec3(0, 0, 0), vec3(H*.05, bs.y*.09, bs.z*.36))),
+                BLACK.lerp(WHITE, 0.28));
+
+            // Dynamic Muzzle Flash when firing
+            // 8. 360 Jump Aerial Shockwave Rings & Aura
+        if (this.jumpEndTime && time < this.jumpEndTime)
+        {
+            const jp = clamp((time - this.jumpStartTime) / (this.jumpEndTime - this.jumpStartTime), 0, 1);
+            const ringPulse = Math.sin(jp * PI);
+            glEmissive = 1.0;
+            glSpecularity = 1.0;
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(0, 40, -bs.z * .4), vec3(0, 0, time * 12), vec3(H * 1.6 * ringPulse, bs.y * 0.12, H * 1.6 * ringPulse))),
+                hsl((time * 5) % 1, 1, 0.75)
+            );
+            cubeMesh.render(
+                m.multiply(buildMatrix(vec3(0, 40, -bs.z * .6), vec3(0, 0, -time * 10), vec3(H * 1.2 * ringPulse, bs.y * 0.1, H * 1.2 * ringPulse))),
+                WHITE
+            );
+        }
+
+        if (this.muzzleFlash && time < this.muzzleFlash)
+            {
+                glEmissive = 1.0;
+                cubeMesh.render(
+                    m.multiply(buildMatrix(vec3(-H*.48, 40-bs.y*.04, bs.z*.54), vec3(0, 0, 0), vec3(H*.14, bs.y*.22, bs.z*.16))),
+                    rgb(1, 0.55, 0.1));
+                cubeMesh.render(
+                    m.multiply(buildMatrix(vec3(H*.48, 40-bs.y*.04, bs.z*.54), vec3(0, 0, 0), vec3(H*.14, bs.y*.22, bs.z*.16))),
+                    rgb(1, 0.55, 0.1));
+            }
+        }
         glEmissive=glSpecularity=0;
     }
 }
@@ -237,41 +370,31 @@ const aiClip=.96, aiCornerSlow=.08, aiCornerBrake=34000, aiBoostGap=5000, aiLine
 function driveAI(v)
 {
     const info=new TrackSegmentInfo(v.s), seg=info.segmentIndex;
+
     const look=1800+v.speed*.16; // route units of lookahead, growing with speed
 
     // lateral aim: the nearest reachable pad, else the racing line plus this rival's lane
     let x=padSeekX(seg,v.localX) ?? (trackRacingLine[seg]*aiLine+(v.lineOffset||0));
     let targetSpeed=maxCraftSpeed*(v.skill||.96)*levelInfo.rivalSkill;
 
-    // the sharpest curvature over the next 300 segments, each weighted down by its distance
-    // (1-k/400: a turn 280 on counts .3), sets the corner pace, the lift and the corner
-    // brake. A short scan sees a hairpin too late to slow from top speed; a plain long one
-    // slows every corner on every circuit; the weight brakes early only for the sharpest
+    // curvature
     let corner=0;
     for(let k=0;k<300;k+=20) corner=max(corner,abs(track[wrapSegment(seg+k)].turn)*(1-k/400));
-    targetSpeed*=clamp(1-corner*aiCornerSlow,.35,1); // at .08 a 10,000 radius (turn 2.5) costs a fifth
-    if(v.racerIndex==currentCircuit) targetSpeed*=1.04; // the home circuit
+    targetSpeed*=clamp(1-corner*aiCornerSlow,.35,1);
+    if(v.racerIndex==currentCircuit) targetSpeed*=1.04;
 
-    // catch-up changes the target pace only, never position: .98-1.1, full at a 40k gap.
-    // Each rival settles where the catch-up cancels its skill, so the slope spaces the field.
-    // The pace is clipped before the catch-up multiplies it, so a rival well behind runs
-    // past the normal top speed and can close on a player on the turbo
+    // catch-up
     const gap=playerVehicle.raceDistance-v.raceDistance;
     targetSpeed=min(targetSpeed,maxCraftSpeed*levelInfo.rivalSkill*aiClip)*clamp(1+gap/400000,.98,1.1);
 
-    // traffic: swerve a lane away from a craft close ahead and do not ram it
+    // traffic avoidance
     for(const other of vehicles)
     {
         if(other===v) continue;
         const d=other.pos.subtract(v.pos), ahead=d.dot(v.forward), side=d.dot(info.right);
-        // not in the first two seconds off the grid: GO lands at time 3 (time, not raceTime,
-        // which only runs in a race: the attract field must avoid traffic too)
         if(ahead>0 && ahead<3400 && abs(side)<650 && time>5)
         {
             x=clamp(v.localX+(side>0?-900:900),-info.w+700,info.w-700);
-            // only a craft squarely ahead holds a rival back; one beside it is passed. Never
-            // below aiPaceFloor of its own target, or the whole field queues behind a crawling
-            // player; in a pack everyone is near their target, so the floor never binds there
             if(ahead<1000 && abs(side)<300 && v.speed>other.speed) targetSpeed=min(targetSpeed,max(other.speed*.98,targetSpeed*aiPaceFloor));
         }
     }
@@ -280,28 +403,51 @@ function driveAI(v)
     const error=clampAngle(Math.atan2(target.x,target.z)-v.heading);
     const steer=clamp(error*3,-1,1);
 
-    // brake when well over pace, or when too fast for the corner ahead: the turning radius
-    // is the speed and a turn of 1 is a 25,000 radius, so speed*turn over 25,000 runs wide.
-    // The over-pace brake waits while a boost runs: the brake cuts boost thrust, so it would
-    // cancel the rival's own pad and catch-up boosts. Without it rivals crash
     const brake=v.boostTime<time&&v.speed>targetSpeed+1350 || v.speed*corner>aiCornerBrake;
 
-    // gas: lifted where speed*turn passes 24,000, a corner the steer rate cannot hold; off
-    //   the gas a rival turns at coastSteer, the player's own trick, and the lift's margin
-    //   lets the brake wait
-    // cap: full gas with the target as a cap (stepVehicle). Gas on-off around the target
-    //   makes the engines flutter; the cap holds the pace and the glow steady
-    // boost: a rival aiBoostGap or more behind holds the player's turbo, at no energy cost
-    return {steer,gas:v.speed*corner<24000,cap:targetSpeed,brake,boost:gap>aiBoostGap}
+    // Rivals attack with fire
+    if (v !== playerVehicle && !titleScreenMode && typeof fireAttack === 'function')
+    {
+        if (!v.nextFireTime)
+            v.nextFireTime = time + 2.0 + Math.random() * 2.5;
+
+        if (time > v.nextFireTime)
+        {
+            let targetAhead = false;
+            if (typeof vehicles !== 'undefined')
+            {
+                for (const other of vehicles)
+                {
+                    if (other === v || other.deadUntil) continue;
+                    const d = other.pos.subtract(v.pos);
+                    const ahead = d.dot(v.forward);
+                    const side = Math.abs(d.dot(info.right));
+                    if (ahead > 500 && ahead < 14000 && side < 800)
+                    {
+                        targetAhead = true;
+                        break;
+                    }
+                }
+            }
+            if (targetAhead)
+            {
+                v.nextFireTime = time + 2.2 + Math.random() * 2.5;
+                fireAttack(v);
+            }
+            else if (time > v.nextFireTime + 3.5)
+            {
+                v.nextFireTime = time + 3.0 + Math.random() * 3.0;
+                fireAttack(v);
+            }
+        }
+    }
+
+    return {steer,gas:v.speed*corner<24000,cap:targetSpeed,brake,boost:gap>aiBoostGap};
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // containment: keep a craft on the road and seated on the route frame
 ///////////////////////////////////////////////////////////////////////////////
-
-// Projects the craft onto the route (hint: the last known s), clamps its rotated
-// footprint inside the walls and seats it 80 units above the frame. Returns whether
-// a wall was touched this call. Updates v.s, v.localX and v.up.
 function containCraft(v)
 {
     const r=projectRoute(v.pos,v.s), info=r.info;
@@ -352,6 +498,20 @@ function containCraft(v)
 // the rough shoulder, ordered gates and race distance.
 function stepVehicle(v,c,dt)
 {
+    if (v.stunTime && time < v.stunTime)
+    {
+        v.speed = 0;
+        v.velocity = vec3();
+        return;
+    }
+    const isAutoW = (!titleScreenMode && (keyIsDown("KeyW") || (typeof fireSpeedMode !== "undefined" && fireSpeedMode)));
+    const isFire = (v === playerVehicle && isAutoW);
+        // Check if landing just occurred
+    if (v.jumpEndTime && time >= v.jumpEndTime && !v.jumpLanded)
+    {
+        v.jumpLanded = true;
+        sound_bump && sound_bump.play(0.65, 2.0);
+    }
     v.previousPosition=v.pos.scale(1);
     // the engine light follows the gas (enhanced: a partial trigger lights it partway): off
     // the gas it shrinks as at rest; on the brake it eases to -.5, so the ribbon narrows to
@@ -419,19 +579,19 @@ function stepVehicle(v,c,dt)
     const turbo=(c.boost || v.boostPower>time) && v.energy>1;
     // the steer multiplier: any craft on the brake or off the gas turns at coastSteer; the
     // player's turbo turns at turboSteer, and the player's multiplier is eased over steerEase
-    const mul=c.brake?coastSteer:turbo&&v===playerVehicle?turboSteer:c.gas?1:coastSteer;
+    const mul=c.brake?coastSteer:turbo&&v===playerVehicle?(isFire?1.5:turboSteer):c.gas?1:coastSteer;
     rate*=v===playerVehicle?steerMul=lerp(dt/steerEase,steerMul,mul):mul;
     v.heading+=c.steer*rate*dt;
     // never backwards: the nose stays within 90 degrees of the road's heading at the
     // craft's route position, rivals included
     const road=new TrackSegmentInfo(v.s).heading;
-    v.heading=road+clamp(clampAngle(v.heading-road),-PI/2,PI/2);
+    v.heading = road + clamp(clampAngle(v.heading - road), -PI / 2, PI / 2);
     const forward=vec3(Math.sin(v.heading),0,Math.cos(v.heading));
     v.forward=forward.subtract(v.up.scale(forward.dot(v.up))).normalize();
     const right=v.up.cross(v.forward).normalize();
 
-    // grip: bleed the sideways component of velocity at gripNormal per second, then put
-    // gripKeep of the speed that took back along the new direction
+    // grip: bleed sideways velocity
+    if(isFire) { v.energy = 100; v.boostPower = time + 0.5; v.boostTime = time + 0.5; }
     const side=v.velocity.dot(right);
     v.velocity=v.velocity.subtract(right.scale(side*(1-Math.exp(-gripNormal*dt))));
     const m=v.velocity.mag();
@@ -451,11 +611,11 @@ function stepVehicle(v,c,dt)
     }
 
     // speed caps: normal 32,000 (or the AI's target, c.cap), a pad's boost 39,000, the turbo 40,000
-    const boosted=v.boostTime>time, cap=boosted?(v.boostPower?40000:39000):c.cap||maxCraftSpeed;
+    const boosted=v.boostTime>time, cap=isFire ? 52000 : boosted?(v.boostPower?40000:39000):c.cap||maxCraftSpeed;
     // thrust (units/s^2): the gas 9,600 (enhanced: times the 0..1 trigger), any boost 20,000
     // (turbo and pad are equal, written apart so they can differ). The brake cuts the gas
     // and the boost's thrust too, or braking on a boost would still gain speed
-    let accel=c.brake?0:boosted?(v.boostPower?20000:20000):c.gas?9600*(enhancedMode?c.gas:1):0;
+    let accel=c.brake?0:isFire ? 36000 : boosted?(v.boostPower?20000:20000):c.gas?9600*(enhancedMode?c.gas:1):0;
     if(speed>=cap) accel=0;
     v.velocity.addSelf(v.forward.scale(accel*dt));
     // deceleration (units/s^2): the brake 10,500, coasting 1,000 (a release should carry), gas 0
@@ -541,23 +701,51 @@ function updateCars()
     for(const v of vehicles)
     {
         let c;
-        // the AI drives every rival, and the player's craft behind the title and menu, under
-        // autodrive and once the race is over (a finish or a death): the field races on
-        if(v!==playerVehicle || titleScreenMode || testDrive || gameOverTime) c=driveAI(v);
+        if(v!==playerVehicle || titleScreenMode || testDrive || gameOverTime)
+        {
+            c=driveAI(v);
+        }
         else
         {
-            // keys ramp the steer over about a quarter of a second both ways (a digital lock
-            // is too twitchy); the mouse below is direct. W, A and D are read beside the
-            // arrows here in every build: far smaller in the 13k build than a key remap
-            keySteer=lerp(keySteerEase,keySteer,(keyIsDown('ArrowRight')|keyIsDown('KeyD'))-(keyIsDown('ArrowLeft')|keyIsDown('KeyA')));
-            // Space brakes (Down cannot be held with the steer keys on many keyboards), left
-            // Shift is the turbo; the enhanced build brakes on Down and S too, written as a
-            // conditional so the 13k build folds to Space alone
-            c={steer:keySteer,gas:keyIsDown('ArrowUp')|keyIsDown('KeyW'),brake:enhancedMode?keyIsDown('Space')|keyIsDown('ArrowDown')|keyIsDown('KeyS'):keyIsDown('Space'),boost:keyIsDown('ShiftLeft')};
-            // the gas key hands steering back to the keys, before the mouse steer applies: a
-            // click to race from the menu leaves the pointer parked over the list, full left
-            // lock, and a keyboard player always gasses to go. Not any key: Space and Shift
-            // keep mouse mode, so a mouse player brakes and boosts from the keyboard
+            if (keyWasPressed('KeyJ') || keyIsDown('KeyJ')) triggerJump(v);
+            const rawKeySteer = (keyIsDown('ArrowRight')|keyIsDown('KeyD')) - (keyIsDown('ArrowLeft')|keyIsDown('KeyA'));
+            keySteer=lerp(keySteerEase,keySteer,rawKeySteer);
+
+            const isAutoW = (!titleScreenMode && (keyIsDown("KeyW") || (typeof fireSpeedMode !== "undefined" && fireSpeedMode)));
+
+            if(isAutoW)
+            {
+                // Smooth auto-direction curve tracking
+                const look = 2200 + v.speed * 0.12;
+                const seg = new TrackSegmentInfo(v.s).segmentIndex;
+                const targetSeg = wrapSegment(seg + 16);
+                const targetX = (trackRacingLine[targetSeg] || 0) * 0.55;
+                const targetPos = sampleRoute(v.s + look, targetX);
+                const toTarget = targetPos.subtract(v.pos);
+                const desiredHeading = Math.atan2(toTarget.x, toTarget.z);
+                const headingError = clampAngle(desiredHeading - v.heading);
+                const autoSteer = clamp(headingError * 2.2, -1, 1);
+
+                // Manual steer overrides auto so player is NEVER stuck
+                const steer = (rawKeySteer !== 0) ? keySteer : autoSteer;
+
+                c = {
+                    steer: steer,
+                    gas: 1,
+                    brake: enhancedMode ? (keyIsDown('Space')|keyIsDown('ArrowDown')|keyIsDown('KeyS')) : keyIsDown('Space'),
+                    boost: 1,
+                    cap: 52000
+                };
+            }
+            else
+            {
+                c = {
+                    steer: keySteer,
+                    gas: keyIsDown('ArrowUp')|keyIsDown('KeyW'),
+                    brake: enhancedMode ? (keyIsDown('Space')|keyIsDown('ArrowDown')|keyIsDown('KeyS')) : keyIsDown('Space'),
+                    boost: keyIsDown('ShiftLeft')
+                };
+            }
             mouseMode &= !c.gas;
             // the enhanced build hands it back on any of the arrows or WASD, or a player
             // steering on the arrows after a click is stuck in mouse control
@@ -655,6 +843,7 @@ function checkCraftContacts()
     {
         const a=vehicles[i],b=vehicles[j];
         if(a.deadUntil || b.deadUntil || startCountdown) continue;
+        if((a.jumpEndTime && time < a.jumpEndTime) || (b.jumpEndTime && time < b.jumpEndTime)) continue;
         const info=new TrackSegmentInfo(a.s), d=b.pos.subtract(a.pos);
         const old=b.previousPosition.subtract(a.previousPosition), move=d.subtract(old);
 
@@ -706,3 +895,35 @@ function checkCraftContacts()
 }
 
 function drawCars() { for(const v of vehicles) v.draw(); }
+
+function triggerJump(v = playerVehicle)
+{
+    if (!v) v = (typeof playerVehicle !== 'undefined' ? playerVehicle : (typeof vehicles !== 'undefined' && vehicles[0]));
+    if (!v || v.deadUntil) return;
+    if (v.jumpEndTime && time < v.jumpEndTime) return;
+
+    v.jumpStartTime = time;
+    v.jumpDuration = 1.15;
+    v.jumpEndTime = time + v.jumpDuration;
+    v.jumpLanded = false;
+
+    // Supersonic rocket launch sound & thrust
+    sound_boost && sound_boost.play(1.0, 2.2);
+    sound_bump && sound_bump.play(0.8, 3.2);
+
+    // Stunt boost reward
+    v.boostPower = time + 1.35;
+    v.boostTime = time + 1.35;
+    v.energy = Math.min(100, v.energy + 35);
+}
+
+// Global key listener for J key
+if (typeof window !== 'undefined')
+{
+    window.addEventListener('keydown', (e) => {
+        if (e.code === 'KeyJ' || e.key === 'j' || e.key === 'J')
+        {
+            triggerJump();
+        }
+    });
+}
