@@ -23,6 +23,7 @@
 const pixelate = 0;        // low-res canvas mode: off (only matters under clampAspectRatios)
 const canvasFixedSize = 0;
 const frameRate = 60;
+const cameraDampingFactor = 0.95; // adaptive camera dampening
 const timeDelta = 1/frameRate; // the fixed simulation step, seconds
 const pixelateScale = 3;
 const random = new Random;     // the shared generator: the world build and the music bake seed it
