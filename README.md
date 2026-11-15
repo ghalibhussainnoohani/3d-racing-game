@@ -66,6 +66,21 @@ Author: Ghalib Hussain (@ghalibhussainnoohani)
 Original Concept: JS13k SP13KTRA by Frank Force
 ```
 
+### 📐 Engine Architecture
+
+```mermaid
+flowchart TD
+    Input["Input Controller (Keyboard / Mouse / Touch)"] --> Physics["Fixed-Step Vehicle Physics Engine (60Hz)"]
+    Physics --> Camera["Adaptive Chase Camera & Damping"]
+    Track["Procedural Track & Skeleton Generator"] --> Scene["WebGL Frame Renderer & Shaders"]
+    Physics --> Scene
+    Camera --> Scene
+    Telemetry["Vehicle Speed & Energy Telemetry"] --> HUD["2D Canvas HUD & Minimap Overlay"]
+    Telemetry --> Audio["Web Audio Procedural Sound Synthesizer"]
+    Scene --> Output["Display Canvas"]
+    HUD --> Output
+```
+
 ---
 
 ## 🚀 Running Locally

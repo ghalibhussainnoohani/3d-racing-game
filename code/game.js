@@ -563,7 +563,8 @@ function updateCamera()
 // time under it and browses up to the circuit after the last one finished. Older SP13K
 // saves are ignored. Read once at load, here, after the declarations above; written on a
 // circuit or craft pick and on a finish (vehicle.js)
-const saveName = 'SP13KTRA';
+const saveName = '3D_RACING_GHALIB';
+const legacySaveName = 'SP13KTRA';
 
 // the enhanced build survives denied storage (a SecurityError would stop the page before
 // gameInit), no progress kept; the 13k build folds to the plain read and write
